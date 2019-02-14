@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/luiz/Documents/projects
+Eclk_div
+Z0 w1550178149
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 d/home/luiz/Documents/projects/ELE1717/code_detector
+Z4 8/home/luiz/Documents/projects/ELE1717/code_detector/div.vhd
+Z5 F/home/luiz/Documents/projects/ELE1717/code_detector/div.vhd
+l0
+L3
+VVHKNjk;XMET>zk>M1iT2c0
+!s100 AkY56D@79PUbhN[UfYFh=3
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1550178154
+!i10b 1
+Z8 !s108 1550178154.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/luiz/Documents/projects/ELE1717/code_detector/div.vhd|
+Z10 !s107 /home/luiz/Documents/projects/ELE1717/code_detector/div.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Ackt
+R1
+R2
+DEx4 work 7 clk_div 0 22 VHKNjk;XMET>zk>M1iT2c0
+l11
+L8
+V[e>a5[BXj7M]GO=gX>5]C3
+!s100 5;cMbb7ZdRVa4FQMmG`8G2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Emde_d
+Z13 w1550177702
+R1
+R2
+R3
+Z14 8/home/luiz/Documents/projects/ELE1717/code_detector/sm.vhd
+Z15 F/home/luiz/Documents/projects/ELE1717/code_detector/sm.vhd
+l0
+L4
+VbSGKFOOL`n`7Q4>H[=Ch;2
+!s100 @jfdhNhh];C;GoALa290B0
+R6
+32
+Z16 !s110 1550177706
+!i10b 1
+Z17 !s108 1550177706.000000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/luiz/Documents/projects/ELE1717/code_detector/sm.vhd|
+Z19 !s107 /home/luiz/Documents/projects/ELE1717/code_detector/sm.vhd|
+!i113 1
+R11
+R12
+Ackt
+R1
+R2
+DEx4 work 5 mde_d 0 22 bSGKFOOL`n`7Q4>H[=Ch;2
+l17
+L11
+VD4n5[fnm@A9CdC2UQTj6i0
+!s100 1YH3gkLjL?W22EbLMPb@a2
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
