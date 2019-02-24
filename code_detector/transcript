@@ -1,0 +1,59 @@
+# Loading project code_detector
+# vsim mde_d 
+# Start time: 16:33:28 on Feb 15,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mde_d(ckt)
+# Loading work.clk_div(ckt)
+# End time: 16:34:24 on Feb 15,2019, Elapsed time: 0:00:56
+# Errors: 0, Warnings: 0
+# vsim mde_d 
+# Start time: 16:34:24 on Feb 15,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mde_d(ckt)
+# Loading work.clk_div(ckt)
+# Compile of sm.vhd was successful with warnings.
+# Compile of div.vhd was successful.
+# Compile of bs.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+# End time: 16:42:30 on Feb 15,2019, Elapsed time: 0:08:06
+# Errors: 0, Warnings: 0
+# vsim bs 
+# Start time: 16:42:30 on Feb 15,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.bs(ckt)
+# End time: 16:44:29 on Feb 15,2019, Elapsed time: 0:01:59
+# Errors: 0, Warnings: 0
+# vsim bs 
+# Start time: 16:44:29 on Feb 15,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.bs(ckt)
+# Compile of sm.vhd was successful with warnings.
+# Compile of div.vhd was successful.
+# Compile of bs.vhd failed with 8 errors.
+# 3 compiles, 1 failed with 8 errors.
+# Compile of sm.vhd was successful with warnings.
+# Compile of div.vhd was successful.
+# Compile of bs.vhd failed with 5 errors.
+# 3 compiles, 1 failed with 5 errors.
+# Compile of sm.vhd was successful with warnings.
+# Compile of div.vhd was successful.
+# Compile of bs.vhd failed with 2 errors.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of sm.vhd was successful with warnings.
+# Compile of div.vhd was successful.
+# Compile of bs.vhd failed with 2 errors.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of sm.vhd was successful with warnings.
+# Compile of div.vhd was successful.
+# Compile of bs.vhd failed with 2 errors.
+# 3 compiles, 1 failed with 2 errors.
+# End time: 19:12:25 on Feb 15,2019, Elapsed time: 2:27:56
+# Errors: 0, Warnings: 0
