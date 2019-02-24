@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 entity mde_d is
     port (clk, sw: in std_logic;
-          key    : in std_logic_vector(4 downto 0);
+          key    : in std_logic_vector(3 downto 0);
           l0,l1  : out std_logic;
           seg    : out std_logic_vector(3 downto 0));
 end mde_d;
@@ -11,7 +11,7 @@ end mde_d;
 architecture ckt of mde_d is
     
     type state_type is (w, a, b, c, d, e, f, g);
-    signal y : state_type;
+    signal y : state_type := w;
     signal s : std_logic;
     signal clkd : std_logic;
 
@@ -29,11 +29,11 @@ begin
     
     process (clkd)
     begin
-        y <= w;
+
         if(clkd'event and clkd = '1') then
             case y is
                 when w =>
-                if key(3) = '0' then y <= a;
+                if key = "0111" then y <= a;
                 else                 y <= w;end if;
 
                 when a =>
@@ -68,22 +68,21 @@ begin
         end if;
     end process;
 
-    process ( y , key )
-    begin
+    process ( y , key, s, sw)
+    begin   
         case y is
             when w =>
                 s <= '1';
             when a => 
-                if not (key(3 downto 0) = "101") then s <= '0';
-                end if;
+                if not key(3 downto 0) = "101" then s <= '0';end if;
             when b => 
-                if not (key(3 downto 0) = "110") then s <= '0'; end if;
+                if not key(3 downto 0) = "110" then s <= '0'; end if;
             when c => 
-                if not (key(3 downto 0) = "011") then s <= '0'; end if;
+                if not key(3 downto 0) = "011" then s <= '0'; end if;
             when d => 
-                if not (key(3 downto 0) = "011") then s <= '0'; end if;
+                if not key(3 downto 0) = "011" then s <= '0'; end if;
             when e => 
-                if not (key(3 downto 0) = "101") then s <= '0'; end if;
+                if not key(3 downto 0) = "101" then s <= '0'; end if;
             when f => 
                 if s = '1'                       then l0 <= '1'; end if;
             when g => 

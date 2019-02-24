@@ -1,0 +1,26 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity FIFO is 
+	port(
+	wr,rd,clk,clr 	: in  std_logic;
+	rdata 			: out std_logic_vector(12 downto 0);
+	wdata 			: in  std_logic_vector(12 downto 0);
+	em,fu			 	: out  std_logic;
+
+	
+	);
+end FIFO;
+
+architecture ckt of FIFO is
+	type state is (s,w,rd1,rd2,wr1,wr2);
+	signal y_present,y_next : state := s;
+	signal lo,clrCont	: std_logic;
+	
+begin 
+		process(wr,rd,y_present)
+		begin 
+			case y_present is
+				when s =>
+				lo <= '0';
+				

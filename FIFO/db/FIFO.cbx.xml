@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="FIFO">
+		<CBX_INST_ENTRY INSTANCE_NAME="|FIFOM|FIFO:fifo1|comapare:equals|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_9hg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FIFOM|counterROM:contador|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_h9i.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|FIFOM|rom:rom1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_gg71.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

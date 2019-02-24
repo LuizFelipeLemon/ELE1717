@@ -1,4 +1,27 @@
-/home/luiz/Documents/projects/ELE1717/code_detector/div.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/luiz/Documents/projects/ELE1717/code_detector/div.vhd
+/home/luiz/Documents/projects/ELE1717/code_detector/sm.vhd {2 {vcom -work work -2002 -explicit -stats=none /home/luiz/Documents/projects/ELE1717/code_detector/sm.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mde_d
+-- Compiling architecture ckt of mde_d
+** Warning: /home/luiz/Documents/projects/ELE1717/code_detector/sm.vhd(77): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 4 is not equal to right length 3).
+** Warning: /home/luiz/Documents/projects/ELE1717/code_detector/sm.vhd(79): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 4 is not equal to right length 3).
+** Warning: /home/luiz/Documents/projects/ELE1717/code_detector/sm.vhd(81): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 4 is not equal to right length 3).
+** Warning: /home/luiz/Documents/projects/ELE1717/code_detector/sm.vhd(83): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 4 is not equal to right length 3).
+** Warning: /home/luiz/Documents/projects/ELE1717/code_detector/sm.vhd(85): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 4 is not equal to right length 3).
+
+} {} {}} /home/luiz/Documents/projects/ELE1717/code_detector/bs.vhd {0 {vcom -work work -2002 -explicit -stats=none /home/luiz/Documents/projects/ELE1717/code_detector/bs.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity bs
+-- Compiling architecture ckt of bs
+** Error: /home/luiz/Documents/projects/ELE1717/code_detector/bs.vhd(21): near "falling_edge": (vcom-1576) expecting == or '+' or '-' or '&'.
+** Error: /home/luiz/Documents/projects/ELE1717/code_detector/bs.vhd(25): VHDL Compiler exiting
+
+} {8.0 10.0} {}} /home/luiz/Documents/projects/ELE1717/code_detector/div.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/luiz/Documents/projects/ELE1717/code_detector/div.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO

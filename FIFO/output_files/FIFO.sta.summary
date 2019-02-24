@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'DIV2:clkDiv|ax'
+Slack : -4.952
+TNS   : -601.402
+
+Type  : Slow Model Setup 'clkM'
+Slack : -2.828
+TNS   : -96.274
+
+Type  : Slow Model Setup 'FIFO:fifo1|y_present.rd1'
+Slack : -2.798
+TNS   : -4.914
+
+Type  : Slow Model Setup 'FIFO:fifo1|y_present.rd2'
+Slack : -2.224
+TNS   : -2.568
+
+Type  : Slow Model Setup 'DIV2:clkDiv|ax2'
+Slack : -0.738
+TNS   : -4.774
+
+Type  : Slow Model Setup 'FIFO:fifo1|y_present.wr2'
+Slack : -0.290
+TNS   : -0.379
+
+Type  : Slow Model Hold 'clkM'
+Slack : -2.518
+TNS   : -5.025
+
+Type  : Slow Model Hold 'DIV2:clkDiv|ax'
+Slack : -2.170
+TNS   : -4.709
+
+Type  : Slow Model Hold 'FIFO:fifo1|y_present.rd1'
+Slack : -0.679
+TNS   : -1.298
+
+Type  : Slow Model Hold 'FIFO:fifo1|y_present.rd2'
+Slack : -0.545
+TNS   : -0.545
+
+Type  : Slow Model Hold 'FIFO:fifo1|y_present.wr2'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'DIV2:clkDiv|ax2'
+Slack : 0.529
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'DIV2:clkDiv|ax2'
+Slack : -1.423
+TNS   : -23.076
+
+Type  : Slow Model Minimum Pulse Width 'clkM'
+Slack : -1.380
+TNS   : -52.380
+
+Type  : Slow Model Minimum Pulse Width 'DIV2:clkDiv|ax'
+Slack : -0.500
+TNS   : -143.000
+
+Type  : Slow Model Minimum Pulse Width 'FIFO:fifo1|y_present.rd2'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Slow Model Minimum Pulse Width 'FIFO:fifo1|y_present.wr2'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Slow Model Minimum Pulse Width 'FIFO:fifo1|y_present.rd1'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'DIV2:clkDiv|ax'
+Slack : -2.332
+TNS   : -273.759
+
+Type  : Fast Model Setup 'FIFO:fifo1|y_present.rd1'
+Slack : -1.028
+TNS   : -1.634
+
+Type  : Fast Model Setup 'clkM'
+Slack : -0.833
+TNS   : -20.117
+
+Type  : Fast Model Setup 'FIFO:fifo1|y_present.rd2'
+Slack : -0.662
+TNS   : -0.662
+
+Type  : Fast Model Setup 'DIV2:clkDiv|ax2'
+Slack : 0.229
+TNS   : 0.000
+
+Type  : Fast Model Setup 'FIFO:fifo1|y_present.wr2'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clkM'
+Slack : -1.562
+TNS   : -3.115
+
+Type  : Fast Model Hold 'DIV2:clkDiv|ax'
+Slack : -1.342
+TNS   : -5.214
+
+Type  : Fast Model Hold 'FIFO:fifo1|y_present.rd1'
+Slack : -0.282
+TNS   : -0.547
+
+Type  : Fast Model Hold 'FIFO:fifo1|y_present.rd2'
+Slack : -0.229
+TNS   : -0.229
+
+Type  : Fast Model Hold 'FIFO:fifo1|y_present.wr2'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'DIV2:clkDiv|ax2'
+Slack : 0.241
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'DIV2:clkDiv|ax2'
+Slack : -1.423
+TNS   : -23.076
+
+Type  : Fast Model Minimum Pulse Width 'clkM'
+Slack : -1.380
+TNS   : -52.380
+
+Type  : Fast Model Minimum Pulse Width 'DIV2:clkDiv|ax'
+Slack : -0.500
+TNS   : -143.000
+
+Type  : Fast Model Minimum Pulse Width 'FIFO:fifo1|y_present.rd2'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Fast Model Minimum Pulse Width 'FIFO:fifo1|y_present.wr2'
+Slack : -0.500
+TNS   : -4.000
+
+Type  : Fast Model Minimum Pulse Width 'FIFO:fifo1|y_present.rd1'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

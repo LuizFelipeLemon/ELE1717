@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="CHANGE">
+		<CBX_INST_ENTRY INSTANCE_NAME="|CHANGE|circuito:ci|mux1:priMux|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_g4e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CHANGE|cofre:cf1|comapare:equals|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_9hg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CHANGE|cofre:cf5|comapare:equals|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_9hg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CHANGE|circuito:ci|dec:dec1|lpm_decode:LPM_DECODE_component" CBX_FILE_NAME="decode_jsf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CHANGE|circuito:ci|equal2:secequal2|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_g7j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CHANGE|circuito:ci|mini_rom:romzin|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_1v71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CHANGE|circuito:ci|mux2:segMux|LPM_MUX:LPM_MUX_component" CBX_FILE_NAME="mux_63e.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CHANGE|circuito:ci|sub:sub1|lpm_add_sub:LPM_ADD_SUB_component" CBX_FILE_NAME="add_sub_mmh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CHANGE|cofre:cf2|comapare:equals|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_9hg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CHANGE|ROM:rum|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_8g71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CHANGE|circuito:ci|smaller:less1|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_tig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CHANGE|cofre:cf3|comapare:equals|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_9hg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CHANGE|circuito:ci|equal:equal1|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_1oi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CHANGE|cofre:cf0|comapare:equals|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_9hg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CHANGE|cofre:cf4|comapare:equals|lpm_compare:LPM_COMPARE_component" CBX_FILE_NAME="cmpr_9hg.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CHANGE|counterROM:cr|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_6ni.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

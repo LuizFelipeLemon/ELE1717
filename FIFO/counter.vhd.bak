@@ -1,0 +1,68 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity FFJK is
+    port(
+         clk,J,K,P,C: in std_logic;
+         q:out std_logic
+        );
+end FFJK;
+
+architecture ckt of FFJK is
+signal qs:std_logic;
+begin
+ process(clk,P,C)
+ begin
+    if P='0' then qs<='1';
+    elsif C='0' then qs<='0';
+    elsif clk='1' AND clk'event then
+            if j='1' AND k='1' then qs<=not qs;
+            elsif j='1' AND k='0' then qs<='1';
+            elsif j='0' AND k='1' then qs<='0';
+            end if;
+    end if;
+ end process;
+q<=qs;
+end ckt;
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity counter is
+	port(
+		clock, CLR, inc: in std_logic;
+		S: out std_logic_vector(3 downto 0)
+	);
+end counter;
+
+architecture ckt of counter is
+
+	signal Set: std_logic_vector(3 downto 0);
+	signal clear: std_logic_vector(3 downto 0);
+	signal i: std_logic_vector(0 to 3);
+	signal Up_Down: std_logic_vector(1 downto 0);
+
+	component FFJK is
+		port(
+			clk, J, K, P, C: in std_logic;
+			q: out std_logic
+		);
+	end component;
+
+begin
+
+
+	F1: FFJK port map(clock,'1','1','1',CLR,i(3));
+	-- Up_Down(0) <= i(3);
+	
+	F2: FFJK port map(clock,i(3),i(3),'1',CLR,i(2));
+	Up_Down(0) <= i(3) and i(2);
+	
+	F3: FFJK port map(clock,Up_Down(0),Up_Down(0),'1',CLR,i(1));
+	Up_Down(1) <= i(3) and i(2) and i(1);
+	
+	F4: FFJK port map(clock,Up_Down(1),Up_Down(1),'1',CLR,i(0));
+
+	S <= "0001";
+
+end ckt;

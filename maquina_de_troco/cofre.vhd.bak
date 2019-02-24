@@ -1,0 +1,22 @@
+library ieee ;
+use ieee . std_logic_1164 .all;
+
+entity cofre is 
+	port(i, clk : in  std_logic;
+		  c4     : out std_logic
+			);
+	
+end cofre;
+
+architecture ckt of cofre is
+
+component counter is
+		port(
+			clock, CLR, inc: in std_logic;
+			S: out std_logic_vector(3 downto 0)
+		);
+	end component;
+
+begin
+
+end ckt;

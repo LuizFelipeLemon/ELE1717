@@ -1,0 +1,36 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity circuito is
+    port( V : in std_logic_vector(9 downto 0);
+			 bs, clk, c5, c4, c3, c2, c1, c0    : in std_logic;
+			 led1, led2, i5, i4, i3, i2, i1, i0 : out std_logic;
+	 );
+	 
+end circuito;
+
+architecture ckt of circuito is
+
+signal clr_p, clk_p, p : std_logic;
+
+component counter is
+	port(
+		clock, CLR, inc: in std_logic;
+		S: out std_logic_vector(3 downto 0)
+	);
+end component;
+
+component mini_rom IS
+	PORT
+	(
+		address		: IN STD_LOGIC_VECTOR (2 DOWNTO 0);
+		clock		: IN STD_LOGIC  := '1';
+		q		: OUT STD_LOGIC_VECTOR (9 DOWNTO 0)
+	);
+END component;
+
+
+begin
+
+
+end ckt;

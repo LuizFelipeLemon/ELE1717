@@ -1,0 +1,9 @@
+
+State Machine - |FIFOM|FIFO:fifo1|y_present
+Name y_present.wr2 y_present.wr1 y_present.rd2 y_present.rd1 y_present.w y_present.s 
+y_present.s 0 0 0 0 0 0 
+y_present.w 0 0 0 0 1 1 
+y_present.rd1 0 0 0 1 0 1 
+y_present.rd2 0 0 1 0 0 1 
+y_present.wr1 0 1 0 0 0 1 
+y_present.wr2 1 0 0 0 0 1 

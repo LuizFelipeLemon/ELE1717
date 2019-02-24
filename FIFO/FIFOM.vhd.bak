@@ -1,0 +1,29 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity FIFOM is 
+	port(
+	clkM, wr, rd, clrfifo, clrcnt, ldcnt :  in std_logic;
+	hex0,hex1,hex2,hex3,hex4,hex5 : out std_logic_vector;
+	);
+end FIFOM;
+
+architecture ckt of FIFOM is
+
+
+component FIFO is 
+	port(
+	wr,rd,clk,clr 	: in  std_logic;
+	rdata 			: out std_logic_vector(12 downto 0);
+	wdata 			: in  std_logic_vector(12 downto 0);
+	em,fu			 	: out  std_logic;
+	fime,inicioe	: out STD_LOGIC_VECTOR (3 DOWNTO 0)
+
+	
+	);
+end component;
+
+
+begin
+
+end ckt;

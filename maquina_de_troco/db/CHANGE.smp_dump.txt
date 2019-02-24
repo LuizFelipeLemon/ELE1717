@@ -1,0 +1,9 @@
+
+State Machine - |circuito|y_present
+Name y_present.F y_present.B y_present.ppp y_present.subt y_present.cal y_present.S 
+y_present.S 0 0 0 0 0 0 
+y_present.cal 0 0 0 0 1 1 
+y_present.subt 0 0 0 1 0 1 
+y_present.ppp 0 0 1 0 0 1 
+y_present.B 0 1 0 0 0 1 
+y_present.F 1 0 0 0 0 1 
