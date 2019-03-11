@@ -1,0 +1,13 @@
+
+State Machine - |processador|control_unity:CU|control_block:BC|y_present
+Name y_present.halt y_present.sum2 y_present.sum1 y_present.store2 y_present.store1 y_present.load2 y_present.load1 y_present.decoding y_present.search y_present.start 
+y_present.start 0 0 0 0 0 0 0 0 0 0 
+y_present.search 0 0 0 0 0 0 0 0 1 1 
+y_present.decoding 0 0 0 0 0 0 0 1 0 1 
+y_present.load1 0 0 0 0 0 0 1 0 0 1 
+y_present.load2 0 0 0 0 0 1 0 0 0 1 
+y_present.store1 0 0 0 0 1 0 0 0 0 1 
+y_present.store2 0 0 0 1 0 0 0 0 0 1 
+y_present.sum1 0 0 1 0 0 0 0 0 0 1 
+y_present.sum2 0 1 0 0 0 0 0 0 0 1 
+y_present.halt 1 0 0 0 0 0 0 0 0 1 

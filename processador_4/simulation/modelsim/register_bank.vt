@@ -1,0 +1,80 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "03/09/2019 20:53:04"
+                                                                                
+// Verilog Test Bench template for design : register_bank
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module register_bank_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg clk;
+reg clr;
+reg [3:0] Rp_addr;
+reg Rp_rd;
+reg [3:0] Rq_addr;
+reg Rq_rd;
+reg [3:0] W_addr;
+reg [15:0] W_data;
+reg W_wr;
+// wires                                               
+wire [15:0]  Rp_data;
+wire [15:0]  Rq_data;
+
+// assign statements (if any)                          
+register_bank i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.clr(clr),
+	.Rp_addr(Rp_addr),
+	.Rp_data(Rp_data),
+	.Rp_rd(Rp_rd),
+	.Rq_addr(Rq_addr),
+	.Rq_data(Rq_data),
+	.Rq_rd(Rq_rd),
+	.W_addr(W_addr),
+	.W_data(W_data),
+	.W_wr(W_wr)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+                                                       
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

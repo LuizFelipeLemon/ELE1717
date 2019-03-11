@@ -1,0 +1,311 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/luiz/intelFPGA/18.1/modelsim_ase/bin
+Ealu
+Z0 w1552169896
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 d/home/luiz/Documents/projects/ELE1717/processadorModelsim
+Z4 8/home/luiz/Documents/projects/ELE1717/processadorModelsim/ALU.vhd
+Z5 F/home/luiz/Documents/projects/ELE1717/processadorModelsim/ALU.vhd
+l0
+L4
+Va@8BQed_3YZHGYhNNQh>80
+!s100 `beoR9X44FO3QZGV_BDT`1
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1552182945
+!i10b 1
+Z8 !s108 1552182945.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/luiz/Documents/projects/ELE1717/processadorModelsim/ALU.vhd|
+Z10 !s107 /home/luiz/Documents/projects/ELE1717/processadorModelsim/ALU.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Ackt
+R1
+R2
+DEx4 work 3 alu 0 22 a@8BQed_3YZHGYhNNQh>80
+l26
+L13
+VcXl=CUWGI;G`h0SE9^:UJ1
+!s100 f0bMJ`Mifgj1l@FAL=D]21
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edatapath
+Z13 w1552181477
+R1
+R2
+R3
+Z14 8/home/luiz/Documents/projects/ELE1717/processadorModelsim/datapath.vhd
+Z15 F/home/luiz/Documents/projects/ELE1717/processadorModelsim/datapath.vhd
+l0
+L4
+VTi_cg1[?bjSa0nd@P<8lP1
+!s100 S089>o1]::NUeOVE==h`a3
+R6
+32
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/luiz/Documents/projects/ELE1717/processadorModelsim/datapath.vhd|
+Z17 !s107 /home/luiz/Documents/projects/ELE1717/processadorModelsim/datapath.vhd|
+!i113 1
+R11
+R12
+Ackt
+R1
+R2
+DEx4 work 8 datapath 0 22 Ti_cg1[?bjSa0nd@P<8lP1
+l53
+L17
+Ve0BjX^l1MJ7oMWYmKe<`;1
+!s100 8fO=]bzT=^1n@eZaB=MH?1
+R6
+32
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Emux1
+Z18 w1552166459
+Z19 DPx3 lpm 14 lpm_components 0 22 BZZBj]8LhndN7CkCjD@L`2
+R1
+R2
+R3
+Z20 8/home/luiz/Documents/projects/ELE1717/processadorModelsim/mux1.vhd
+Z21 F/home/luiz/Documents/projects/ELE1717/processadorModelsim/mux1.vhd
+l0
+L42
+V;E7D5ZoIbY2?7i386Zg]N0
+!s100 Um;]EHbP[nocNnOER@M>J3
+R6
+32
+R7
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/luiz/Documents/projects/ELE1717/processadorModelsim/mux1.vhd|
+Z23 !s107 /home/luiz/Documents/projects/ELE1717/processadorModelsim/mux1.vhd|
+!i113 1
+R11
+R12
+Asyn
+R19
+R1
+R2
+DEx4 work 4 mux1 0 22 ;E7D5ZoIbY2?7i386Zg]N0
+l64
+L53
+VEJ=AaFenGNE4IodjAiUa=0
+!s100 aFii8eI@ba@>PPGKHiVnO1
+R6
+32
+R7
+!i10b 1
+R8
+R22
+R23
+!i113 1
+R11
+R12
+Eram
+Z24 w1552177083
+R1
+R2
+R3
+Z25 8/home/luiz/Documents/projects/ELE1717/processadorModelsim/ram.vhd
+Z26 F/home/luiz/Documents/projects/ELE1717/processadorModelsim/ram.vhd
+l0
+L42
+VV5dd@C@eDJ?hZ[IF5RLWz3
+!s100 [dk1da1G23UboZn_@OEQj1
+R6
+32
+R7
+!i10b 1
+R8
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/luiz/Documents/projects/ELE1717/processadorModelsim/ram.vhd|
+Z28 !s107 /home/luiz/Documents/projects/ELE1717/processadorModelsim/ram.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+Z29 DEx4 work 3 ram 0 22 V5dd@C@eDJ?hZ[IF5RLWz3
+l106
+L58
+Z30 VTFGL^89>39o1fRUJQ9Ih[2
+Z31 !s100 6?H55__9HXKal<F;D;F4O0
+R6
+32
+R7
+!i10b 1
+R8
+R27
+R28
+!i113 1
+R11
+R12
+Eregister_bank
+Z32 w1552163810
+Z33 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z34 8/home/luiz/Documents/projects/ELE1717/processadorModelsim/register_bank.vhd
+Z35 F/home/luiz/Documents/projects/ELE1717/processadorModelsim/register_bank.vhd
+l0
+L5
+V2jdWRkPinzTZOzizjknBh2
+!s100 Z`Dm``KIE=K^L88]1d_9S3
+R6
+32
+R7
+!i10b 1
+R8
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/luiz/Documents/projects/ELE1717/processadorModelsim/register_bank.vhd|
+Z37 !s107 /home/luiz/Documents/projects/ELE1717/processadorModelsim/register_bank.vhd|
+!i113 1
+R11
+R12
+Ackt
+R33
+R1
+R2
+DEx4 work 13 register_bank 0 22 2jdWRkPinzTZOzizjknBh2
+l17
+L14
+VWlb>Bz<hS>L4=ZGXmikb91
+!s100 ]ZAzZ_OCnXT9Qkba]02N>1
+R6
+32
+R7
+!i10b 1
+R8
+R36
+R37
+!i113 1
+R11
+R12
+vregister_bank_vlg_check_tst
+Z38 !s110 1552170787
+!i10b 1
+!s100 ?_]HC?3JPAM0aHzgVi7<>1
+I2F`KoRjRLHCoj4=CP[L_C1
+Z39 VDg1SIo80bB@j0V0VzS_@n1
+R3
+Z40 w1552170486
+Z41 8/home/luiz/Documents/projects/ELE1717/processador_4/simulation/modelsim/register_bank.vwf.vt
+Z42 F/home/luiz/Documents/projects/ELE1717/processador_4/simulation/modelsim/register_bank.vwf.vt
+L0 73
+Z43 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z44 !s108 1552170786.000000
+Z45 !s107 /home/luiz/Documents/projects/ELE1717/processador_4/simulation/modelsim/register_bank.vwf.vt|
+Z46 !s90 -reportprogress|300|-work|work|/home/luiz/Documents/projects/ELE1717/processador_4/simulation/modelsim/register_bank.vwf.vt|
+!i113 1
+Z47 o-work work
+Z48 tCvgOpt 0
+vregister_bank_vlg_sample_tst
+R38
+!i10b 1
+!s100 4VJ>^Gco67GS;EakdfTQD2
+I];03iANP:WZNa?DB>f4z21
+R39
+R3
+R40
+R41
+R42
+L0 29
+R43
+r1
+!s85 0
+31
+R44
+R45
+R46
+!i113 1
+R47
+R48
+vregister_bank_vlg_vec_tst
+R38
+!i10b 1
+!s100 ;WVS:BZllllD_f[WU[@c@2
+IFQc_JDFTgHH=eAL1Z??zF0
+R39
+R3
+R40
+R41
+R42
+L0 733
+R43
+r1
+!s85 0
+31
+R44
+R45
+R46
+!i113 1
+R47
+R48
+Esomador
+Z49 w1552166619
+R1
+R2
+R3
+Z50 8/home/luiz/Documents/projects/ELE1717/processadorModelsim/somador.vhd
+Z51 F/home/luiz/Documents/projects/ELE1717/processadorModelsim/somador.vhd
+l0
+L42
+VVA=S7K?8UgdoNZeAjS^>02
+!s100 AJUO9cnnakTY38[Fo;2BT1
+R6
+32
+R7
+!i10b 1
+R8
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|/home/luiz/Documents/projects/ELE1717/processadorModelsim/somador.vhd|
+Z53 !s107 /home/luiz/Documents/projects/ELE1717/processadorModelsim/somador.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 7 somador 0 22 VA=S7K?8UgdoNZeAjS^>02
+l73
+L52
+V;e8o;Q9m7D=7:BX7f:oih0
+!s100 _eVVKg8NzH>am:0_lkf:;2
+R6
+32
+R7
+!i10b 1
+R8
+R52
+R53
+!i113 1
+R11
+R12

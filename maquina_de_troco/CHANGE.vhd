@@ -6,7 +6,7 @@ entity CHANGE is
 			 hex0,hex1,hex2       : out std_logic_vector(6 downto 0);
 			 clkout, led1, led2   : out std_logic := '0';
 			 addro		: out STD_LOGIC_VECTOR (3 DOWNTO 0);
-			 o,a,b,c,d,e : out std_logic
+			 o,a,b,c,d,e,f : out std_logic
 	 );
 	 
 end CHANGE;
@@ -100,11 +100,12 @@ begin
 	cf4 : cofre port map(i4, clk_m, c4);
 	cf5 : cofre port map(i5, clk_m, c5);
 	
-	a <= c0;
-	b<= c1;
-	c<= c2;
-	d<= c3;
-	e<= c4;
+	a <= i0;
+	b <= i1;
+	c <= i2;
+	d <= i3;
+	e <= i4;
+	f <= i5;
 	
 	ci : circuito port map(V, bs_o, clk_m, c5, c4, c3, c2, c1, c0, '0',
 									led1, led2, i5, i4, i3, i2, i1, i0 );

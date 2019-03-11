@@ -3,43 +3,43 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'circuito:ci|y_present.B'
-Slack : -5.884
-TNS   : -25.160
+Slack : -6.563
+TNS   : -29.121
 
 Type  : Slow Model Setup 'CLK_Div:div|ax'
-Slack : -4.225
-TNS   : -46.973
-
-Type  : Slow Model Setup 'clkM'
-Slack : -0.208
-TNS   : -0.279
+Slack : -4.233
+TNS   : -48.651
 
 Type  : Slow Model Setup 'circuito:ci|y_present.ppp'
-Slack : -0.118
-TNS   : -0.227
+Slack : -0.092
+TNS   : -0.173
+
+Type  : Slow Model Setup 'clkM'
+Slack : -0.071
+TNS   : -0.139
 
 Type  : Slow Model Hold 'clkM'
-Slack : -2.635
-TNS   : -2.635
+Slack : -2.619
+TNS   : -2.619
 
 Type  : Slow Model Hold 'circuito:ci|y_present.B'
-Slack : -2.443
-TNS   : -6.549
+Slack : -1.885
+TNS   : -5.179
 
 Type  : Slow Model Hold 'CLK_Div:div|ax'
-Slack : -0.828
-TNS   : -2.456
+Slack : -0.797
+TNS   : -2.284
 
 Type  : Slow Model Hold 'circuito:ci|y_present.ppp'
 Slack : 0.391
 TNS   : 0.000
 
 Type  : Slow Model Recovery 'circuito:ci|y_present.ppp'
-Slack : -2.095
-TNS   : -8.380
+Slack : -2.020
+TNS   : -8.080
 
 Type  : Slow Model Removal 'circuito:ci|y_present.ppp'
-Slack : 2.865
+Slack : 2.790
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'CLK_Div:div|ax'
@@ -59,43 +59,43 @@ Slack : 0.500
 TNS   : 0.000
 
 Type  : Fast Model Setup 'circuito:ci|y_present.B'
-Slack : -2.732
-TNS   : -10.769
+Slack : -3.058
+TNS   : -12.685
 
 Type  : Fast Model Setup 'CLK_Div:div|ax'
-Slack : -1.971
-TNS   : -18.675
-
-Type  : Fast Model Setup 'clkM'
-Slack : 0.439
-TNS   : 0.000
+Slack : -1.974
+TNS   : -19.570
 
 Type  : Fast Model Setup 'circuito:ci|y_present.ppp'
-Slack : 0.475
+Slack : 0.488
+TNS   : 0.000
+
+Type  : Fast Model Setup 'clkM'
+Slack : 0.506
 TNS   : 0.000
 
 Type  : Fast Model Hold 'clkM'
-Slack : -1.651
-TNS   : -1.651
+Slack : -1.635
+TNS   : -1.635
 
 Type  : Fast Model Hold 'circuito:ci|y_present.B'
-Slack : -1.436
-TNS   : -4.238
+Slack : -1.184
+TNS   : -3.657
 
 Type  : Fast Model Hold 'CLK_Div:div|ax'
-Slack : -0.690
-TNS   : -2.643
+Slack : -0.685
+TNS   : -1.994
 
 Type  : Fast Model Hold 'circuito:ci|y_present.ppp'
 Slack : 0.215
 TNS   : 0.000
 
 Type  : Fast Model Recovery 'circuito:ci|y_present.ppp'
-Slack : -0.844
-TNS   : -3.376
+Slack : -0.812
+TNS   : -3.248
 
 Type  : Fast Model Removal 'circuito:ci|y_present.ppp'
-Slack : 1.724
+Slack : 1.692
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'CLK_Div:div|ax'

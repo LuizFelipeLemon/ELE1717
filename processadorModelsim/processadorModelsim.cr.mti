@@ -1,0 +1,51 @@
+/home/luiz/Documents/projects/ELE1717/processadorModelsim/somador.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/luiz/Documents/projects/ELE1717/processadorModelsim/somador.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity somador
+-- Compiling architecture SYN of somador
+
+} {} {}} /home/luiz/Documents/projects/ELE1717/processadorModelsim/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/luiz/Documents/projects/ELE1717/processadorModelsim/ALU.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ALU
+-- Compiling architecture ckt of ALU
+
+} {} {}} /home/luiz/Documents/projects/ELE1717/processadorModelsim/datapath.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/luiz/Documents/projects/ELE1717/processadorModelsim/datapath.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity datapath
+-- Compiling architecture ckt of datapath
+
+} {} {}} /home/luiz/Documents/projects/ELE1717/processadorModelsim/mux1.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/luiz/Documents/projects/ELE1717/processadorModelsim/mux1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package LPM_COMPONENTS
+-- Compiling entity mux1
+-- Compiling architecture SYN of mux1
+
+} {} {}} /home/luiz/Documents/projects/ELE1717/processadorModelsim/ram.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/luiz/Documents/projects/ELE1717/processadorModelsim/ram.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ram
+-- Compiling architecture SYN of ram
+
+} {} {}} /home/luiz/Documents/projects/ELE1717/processadorModelsim/register_bank.vhd {1 {vcom -work work -2002 -explicit -stats=none /home/luiz/Documents/projects/ELE1717/processadorModelsim/register_bank.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity register_bank
+-- Compiling architecture ckt of register_bank
+
+} {} {}}

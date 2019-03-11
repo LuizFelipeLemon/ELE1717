@@ -1,5 +1,5 @@
 Flow report for CHANGE
-Sun Feb 24 16:57:11 2019
+Tue Feb 26 14:10:19 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Sun Feb 24 16:57:11 2019      ;
+; Flow Status                        ; Successful - Tue Feb 26 14:10:19 2019      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; CHANGE                                     ;
-; Top-level Entity Name              ; circuito                                   ;
+; Top-level Entity Name              ; CHANGE                                     ;
 ; Family                             ; Cyclone II                                 ;
 ; Device                             ; EP2C50F672C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 57                                         ;
-;     Total combinational functions  ; 57                                         ;
-;     Dedicated logic registers      ; 20                                         ;
-; Total registers                    ; 20                                         ;
-; Total pins                         ; 27                                         ;
+; Total logic elements               ; 181 / 50,528 ( < 1 % )                     ;
+;     Total combinational functions  ; 181 / 50,528 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 54 / 50,528 ( < 1 % )                      ;
+; Total registers                    ; 54                                         ;
+; Total pins                         ; 38 / 450 ( 8 % )                           ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 50                                         ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
+; Total memory bits                  ; 210 / 594,432 ( < 1 % )                    ;
+; Embedded Multiplier 9-bit elements ; 0 / 172 ( 0 % )                            ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/24/2019 16:57:09 ;
+; Start date & time ; 02/26/2019 14:09:54 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CHANGE              ;
 +-------------------+---------------------+
@@ -75,10 +75,14 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.155103822909765                     ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 0.155120099410720                     ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                    ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_DECODE                            ; --            ; --          ; --             ;
+; IP_TOOL_NAME                        ; ROM: 1-PORT                           ; --            ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_COUNTER                           ; --            ; --          ; --             ;
+; IP_TOOL_NAME                        ; LPM_COMPARE                           ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                        ; ROM: 1-PORT                           ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                        ; LPM_MUX                               ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                        ; LPM_ADD_SUB                           ; --            ; --          ; --             ;
@@ -86,9 +90,7 @@ applicable agreement for further details.
 ; IP_TOOL_NAME                        ; LPM_COMPARE                           ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                        ; LPM_COMPARE                           ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                        ; LPM_COMPARE                           ; --            ; --          ; --             ;
-; IP_TOOL_NAME                        ; LPM_DECODE                            ; --            ; --          ; --             ;
-; IP_TOOL_NAME                        ; ROM: 1-PORT                           ; --            ; --          ; --             ;
-; IP_TOOL_NAME                        ; LPM_COUNTER                           ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 13.0                                  ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                     ; 13.0                                  ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                     ; 13.0                                  ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                     ; 13.0                                  ; --            ; --          ; --             ;
@@ -101,39 +103,50 @@ applicable agreement for further details.
 ; IP_TOOL_VERSION                     ; 13.0                                  ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; circuito    ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; circuito    ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; circuito    ; Top            ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; circuito                              ; CHANGE        ; --          ; --             ;
 +-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 655 MB              ; 00:00:02                           ;
-; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 661 MB              ; 00:00:04                           ;
+; Fitter                    ; 00:00:09     ; 1.0                     ; 774 MB              ; 00:00:09                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 563 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 517 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 789 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:19     ; --                      ; --                  ; 00:00:18                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+----------------------+------------------+----------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
-+----------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; luiz             ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
-+----------------------+------------------+----------------+------------+----------------+
++---------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                             ;
++---------------------------+------------------+----------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++---------------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis      ; luiz             ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
+; Fitter                    ; luiz             ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
+; Assembler                 ; luiz             ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
+; TimeQuest Timing Analyzer ; luiz             ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
+; EDA Netlist Writer        ; luiz             ; Ubuntu 18.04.2 ; 18         ; x86_64         ;
++---------------------------+------------------+----------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off CHANGE -c CHANGE
+quartus_fit --read_settings_files=off --write_settings_files=off CHANGE -c CHANGE
+quartus_asm --read_settings_files=off --write_settings_files=off CHANGE -c CHANGE
+quartus_sta CHANGE -c CHANGE
+quartus_eda --read_settings_files=off --write_settings_files=off CHANGE -c CHANGE
 
 
 

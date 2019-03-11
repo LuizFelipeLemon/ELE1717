@@ -1,0 +1,114 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/luiz/Documents/projects/ELE1717/processador_4/simulation/modelsim
+Eregister_bank
+Z1 w1552163810
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8/home/luiz/Documents/projects/ELE1717/processador_4/register_bank.vhd
+Z6 F/home/luiz/Documents/projects/ELE1717/processador_4/register_bank.vhd
+l0
+L5
+VIPA[iCD@ZF_bK1k?cf2jV0
+!s100 Z`Dm``KIE=K^L88]1d_9S3
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1552174957
+!i10b 1
+Z9 !s108 1552174957.000000
+Z10 !s90 -reportprogress|300|-work|work2|/home/luiz/Documents/projects/ELE1717/processador_4/register_bank.vhd|
+Z11 !s107 /home/luiz/Documents/projects/ELE1717/processador_4/register_bank.vhd|
+!i113 1
+Z12 o-work work2
+Z13 tExplicit 1 CvgOpt 0
+Ackt
+R2
+R3
+R4
+DEx4 work 13 register_bank 0 22 IPA[iCD@ZF_bK1k?cf2jV0
+l17
+L14
+VKJidN`>MEERF76YUB9RSf0
+!s100 ]ZAzZ_OCnXT9Qkba]02N>1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vregister_bank_vlg_check_tst
+Z14 !s110 1552174950
+!i10b 1
+!s100 ?_]HC?3JPAM0aHzgVi7<>1
+IHA9J`^nE<m`RSMZBMXX:g1
+Z15 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z16 w1552172932
+Z17 8/home/luiz/Documents/projects/ELE1717/processador_4/simulation/modelsim/register_bank.vwf.vt
+Z18 F/home/luiz/Documents/projects/ELE1717/processador_4/simulation/modelsim/register_bank.vwf.vt
+L0 73
+Z19 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z20 !s108 1552174949.000000
+Z21 !s107 /home/luiz/Documents/projects/ELE1717/processador_4/simulation/modelsim/register_bank.vwf.vt|
+Z22 !s90 -reportprogress|300|-work|work2|/home/luiz/Documents/projects/ELE1717/processador_4/simulation/modelsim/register_bank.vwf.vt|
+!i113 1
+R12
+Z23 tCvgOpt 0
+vregister_bank_vlg_sample_tst
+R14
+!i10b 1
+!s100 4VJ>^Gco67GS;EakdfTQD2
+I<RMNmkdCizAGPRaH^6GKg1
+R15
+R0
+R16
+R17
+R18
+L0 29
+R19
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R12
+R23
+vregister_bank_vlg_vec_tst
+R14
+!i10b 1
+!s100 ;WVS:BZllllD_f[WU[@c@2
+I;LiHRFOLHiPFaR=z`;1K=0
+R15
+R0
+R16
+R17
+R18
+L0 733
+R19
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R12
+R23

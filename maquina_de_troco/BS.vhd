@@ -35,5 +35,5 @@ begin
         end if;
     end process ;
         
-    bo <= '0' when y_present = b else '1';
+    bo <= '1' when y_present = b else '0';
 end button;

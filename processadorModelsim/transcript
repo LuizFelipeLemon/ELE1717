@@ -1,0 +1,14 @@
+# Loading project processadorModelsim
+# reading /home/luiz/intelFPGA/18.1/modelsim_ase/linuxaloem/../modelsim.ini
+cd /home/luiz/Documents/projects/ELE1717/processador_4/simulation/modelsim
+vlib work
+# ** Error: (vlib-35) Failed to create directory "work".
+# Permission denied. (errno = EACCES)
+vmap work work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work work 
+# Copying /home/luiz/intelFPGA/18.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# ** Error: (vmap-7) Failed to open ini file "modelsim.ini" in write mode.
+# Permission denied. (errno = EACCES)
+# ** Error: (vmap-20) Cannot access for writing file "/home/luiz/intelFPGA/18.1/modelsim_ase/linuxaloem/../modelsim.ini".
+# Permission denied. (errno = EACCES)

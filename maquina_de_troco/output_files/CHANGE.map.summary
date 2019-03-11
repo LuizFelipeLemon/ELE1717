@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sun Feb 24 16:57:11 2019
+Analysis & Synthesis Status : Successful - Tue Feb 26 14:09:58 2019
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Web Edition
 Revision Name : CHANGE
-Top-level Entity Name : circuito
+Top-level Entity Name : CHANGE
 Family : Cyclone II
-Total logic elements : 57
-    Total combinational functions : 57
-    Dedicated logic registers : 20
-Total registers : 20
-Total pins : 27
+Total logic elements : 181
+    Total combinational functions : 181
+    Dedicated logic registers : 54
+Total registers : 54
+Total pins : 38
 Total virtual pins : 0
-Total memory bits : 50
+Total memory bits : 210
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
