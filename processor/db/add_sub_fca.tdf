@@ -1,0 +1,95 @@
+--lpm_add_sub CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48 DEVICE_FAMILY="Cyclone II" add_sub(vcc) dataa datab result
+--VERSION_BEGIN 13.0 cbx_cycloneii 2013:06:12:18:03:33:SJ cbx_lpm_add_sub 2013:06:12:18:03:33:SJ cbx_mgl 2013:06:12:18:33:59:SJ cbx_stratix 2013:06:12:18:03:33:SJ cbx_stratixii 2013:06:12:18:03:33:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2013 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+
+--synthesis_resources = 
+SUBDESIGN add_sub_fca
+( 
+	add_sub	:	input;
+	dataa	:	input;
+	datab	:	input;
+	result	:	output;
+) 
+VARIABLE 
+	const_node_add_sub	: NODE;
+	cin_wire	: WIRE;
+	datab_node	: WIRE;
+	sum_eqn	: WIRE;
+
+BEGIN 
+	const_node_add_sub = add_sub;
+	cin_wire = B"0";
+	datab_node = datab;
+	result = sum_eqn;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter lpm_add_sub|LPM_WIDTH has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter lpm_add_sub|LPM_WIDTH has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter lpm_add_sub|LPM_WIDTH has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter lpm_add_sub|LPM_WIDTH has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter lpm_add_sub|LPM_WIDTH has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter lpm_add_sub|LPM_WIDTH has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Invalid parameter LPM_WIDTH is used to specify the width of port lpm_add_sub|dataa. CAUSE : The parameter is being used to specify the width of a port. However the parameter does not exist or is a string parameter (only integer parameters can be used to specify widths of ports). ACTION : Use a valid integer parameter name to specify port widths."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter lpm_add_sub|LPM_WIDTH has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Invalid parameter LPM_WIDTH is used to specify the width of port lpm_add_sub|datab. CAUSE : The parameter is being used to specify the width of a port. However the parameter does not exist or is a string parameter (only integer parameters can be used to specify widths of ports). ACTION : Use a valid integer parameter name to specify port widths."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter lpm_add_sub|LPM_WIDTH has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Invalid parameter LPM_WIDTH is used to specify the width of port lpm_add_sub|result. CAUSE : The parameter is being used to specify the width of a port. However the parameter does not exist or is a string parameter (only integer parameters can be used to specify widths of ports). ACTION : Use a valid integer parameter name to specify port widths."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Parameter lpm_add_sub|LPM_WIDTH has no default value and has not been assigned any value. CAUSE : An attempt was made to access the value of a parameter which has no default, and has not been assigned a value. All parameters should have a default value, or, if the parameter is a required parameter, an assignment should be made. ACTION : Specify a value for the parameter or if the parameter is an optional parameter, specify a default value."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Port object lpm_add_sub|datab_node of width  -1 is being assigned the port lpm_add_sub|datab of width 1 which is illegal, as port widths dont match nor are multiples. CAUSE : The port widths are mismatched in the mentioned assignment. The port widths of the connected ports should match or the LHS port width should be a multiple of the RHS port width. ACTION : Check the port widths of the connected ports. Logical operation results in a port width equal to the larger of the two ports and concatenation results in a port width equal to the sum of the individual port widths. Double check for such cases."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Port lpm_add_sub|datab_node is of width -1 but the range indices are (0, 0) CAUSE : The range indices are illegal, either the higher index is more than the width of the port or the lower index is less than 0."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Port lpm_add_sub|carry_eqn is of width -1 but the range indices are (0, 0) CAUSE : The range indices are illegal, either the higher index is more than the width of the port or the lower index is less than 0."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Port lpm_add_sub|carry_eqn of width -1 is being made an assignment of lpm_add_sub|dataa|range--w_dataa_range2w AND lpm_add_sub|datab_node|range--w_datab_node_range1w OR lpm_add_sub|dataa|range--w_dataa_range2w OR lpm_add_sub|datab_node|range--w_datab_node_range1w AND lpm_add_sub|cin_wire in the range 0 to 0 CAUSE : An attempt was made to assign a bit that is not there in the port."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Port lpm_add_sub|sum_eqn is of width -1 but the range indices are (0, 0) CAUSE : The range indices are illegal, either the higher index is more than the width of the port or the lower index is less than 0."
+	SEVERITY ERROR;
+	ASSERT (0) 
+	REPORT "MGL_INTERNAL_ERROR: Port lpm_add_sub|sum_eqn of width -1 is being made an assignment of lpm_add_sub|dataa|range--w_dataa_range2w EXOR lpm_add_sub|datab_node|range--w_datab_node_range1w EXOR lpm_add_sub|cin_wire in the range 0 to 0 CAUSE : An attempt was made to assign a bit that is not there in the port."
+	SEVERITY ERROR;
+END;
+--ERROR FILE

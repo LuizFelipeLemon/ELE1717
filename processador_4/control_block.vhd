@@ -72,22 +72,14 @@ begin
 			
 			when load1 =>
 				y_next <= load2;
+				
 			when load2 =>
 				y_next <= search;
-				--D_addr <= d;
-				--D_rd <= '1';
-				--RF_s <= '1';
-				--RF_W_addr <= ra;
-				--RF_W_wr <= '1';
 			
 			when store1 =>
 				y_next <= store2;
 			when store2 =>
 				y_next <= search;
-				--D_addr <= d;
-				--D_wr <= '1';
-				--RF_Rp_addr <= ra;
-				--RF_Rp_rd <= '1';
 			
 			when sum1 =>
 				y_next <= sum2;
