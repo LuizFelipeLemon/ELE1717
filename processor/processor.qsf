@@ -75,10 +75,11 @@ set_global_assignment -name QIP_FILE decode.qip
 set_global_assignment -name VECTOR_WAVEFORM_FILE test_control_unity.vwf
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_global_assignment -name VHDL_FILE processor.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE processor.vwf
+set_global_assignment -name VHDL_FILE mux2.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE processor.vwf
-set_global_assignment -name VHDL_FILE mux2.vhd
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VHDL_FILE ffd.vhd
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE /home/luiz/Documents/projects/ELE1717/processor/processor.vwf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

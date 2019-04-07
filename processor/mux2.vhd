@@ -9,6 +9,7 @@ ENTITY mux2 IS
 		data2x		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		data3x		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		data4x		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		data5x      : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		sel		   : IN STD_LOGIC_VECTOR (2 DOWNTO 0);
 		result		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
 	);
@@ -21,6 +22,7 @@ begin
 					data1x when (sel = "001") else
 					data2x when (sel = "010") else
 					data3x when (sel = "011") else
-					data4x;
+					data4x when (sel = "100") else
+					data5x;
 
 end ckt;

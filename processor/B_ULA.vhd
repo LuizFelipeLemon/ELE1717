@@ -48,6 +48,8 @@ COMPONENT comp IS
 	);
 END COMPONENT;
 
+
+
 SIGNAL OUT_ADDER : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL C_adder : STD_LOGIC;
 
@@ -64,6 +66,7 @@ SIGNAL out_ULA   :  STD_LOGIC_VECTOR (7 DOWNTO 0);
 SIGNAL OUT_CMP : STD_LOGIC;
 
 SIGNAL SHL,SHR   :  unsigned (7 DOWNTO 0);
+
 
 
 
@@ -97,9 +100,9 @@ BEGIN
 	 not C_inc   WHEN OP_sel = "0100" ELSE
 	     '0';
 	 
-	 Z <= OUT_CMP WHEN OP_sel = "0101" ELSE
-	    '1' WHEN out_ULA = "00000000" ELSE 
-		 '0';
+	 Z <= OUT_CMP WHEN OP_sel = "1011" ELSE
+	    '1' WHEN out_ULA = "00000000"  ELSE
+		  '0';
 	 
 	 out_ULAM <= out_ULA;
 		
