@@ -95,9 +95,12 @@ BEGIN
 				
 	C <= C_adder WHEN OP_sel = "0000" ELSE
 	 not C_adder WHEN OP_sel = "0001" ELSE
-	 OUT_MULT(8) WHEN OP_sel = "0010" ELSE
+	 '1' WHEN (OP_sel = "0010" AND to_integer(unsigned(OUT_MULT(15 DOWNTO 8))) > 0)  ELSE
+	 '0' WHEN (OP_sel = "0010" AND to_integer(unsigned(OUT_MULT(15 DOWNTO 8))) = 0)  ELSE
 		  C_inc   WHEN OP_sel = "0011" ELSE
 	 not C_inc   WHEN OP_sel = "0100" ELSE
+	 '0' WHEN (OP_sel = "1011" AND A > B)  ELSE
+	 '1' WHEN (OP_sel = "1011" AND B > A)  ELSE
 	     '0';
 	 
 	 Z <= OUT_CMP WHEN OP_sel = "1011" ELSE

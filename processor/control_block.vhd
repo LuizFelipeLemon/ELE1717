@@ -4,7 +4,7 @@ USE ieee.std_logic_1164.all;
 ENTITY control_block IS
 	PORT
 	(
-		r,clk : in std_logic;
+		r,clk,Z,C : in std_logic;
 		Wa,clk_d    : OUT STD_LOGIC;
 		
 		count_PC  : OUT STD_LOGIC;						 --PC
@@ -50,7 +50,7 @@ signal ra,rb,rc: std_LOGIC_VECTOR(3 downto 0);
 
 
 
-type state is (start,search,search2,decoding,JMP2,STK3,STK4,STK5,MOV,ADD,ADD2,ADD3,INC,CMP,JMP,HLT,OPR,OPR_1,OPR_2,RET,OPR2,ERRO,EXE,MOV2,MOV3,STK,STK2);
+type state is (start,search,search2,decoding,JMP2,JMP3,STK3,STK4,STK5,MOV,MOV4,ADD,ADD2,ADD3,INC,CMP,JMP,HLT,OPR,OPR_1,OPR_2,RET,OPR2,ERRO,EXE,MOV2,MOV3,STK,STK2);
 signal y_present: state ;
 signal y_next : state:= start;
 
@@ -142,11 +142,8 @@ begin
 				y_next <= start;
 
 			when MOV2 =>
-				if (op_out >= X"05" AND op_out <= X"08") then
 					y_next <= MOV3;
-				else 
-					y_next <= start;
-				end if;
+				
 				
 			when ADD =>
 				y_next <= ADD2;
@@ -173,15 +170,16 @@ begin
 				y_next <= JMP2;
 				
 			when JMP2 =>
-				y_next <= start;
-			
+				y_next <= JMP3;
+			when JMP3 =>
+				y_next <= start;			
 			
 			when OTHERS =>
 				y_next <= start;
 		end case;
 	end process;
 	
-	process(y_present,op_out,op1_out,op2_out,out_SP)
+	process(y_present,op_out,op1_out,op2_out,out_SP,Z,C)
 	begin
 		count_PC <= '0';
 		sel_PC <= "01"; 
@@ -229,7 +227,179 @@ begin
 			when JMP =>
 				if (op_out = x"1E") then
 					AB_Reg <= op2_out(1 DOWNTO 0);
+					sel_MUX_MEM	<= "010"; 
 					
+				elsif (op_out = x"1F") then
+					const <= op2_out;
+					sel_MUX_MEM	<= "010";  
+					
+				elsif (op_out = x"20") then
+					if(C = '1') then
+						AB_Reg <= op2_out(1 DOWNTO 0);
+						sel_MUX_MEM	<= "010"; 
+					end if; 
+					
+				elsif (op_out = x"21") then
+					if(C = '1') then
+						const <= op2_out;
+						sel_MUX_MEM	<= "010"; 
+					end if; 
+				
+				elsif (op_out = x"22") then
+					if(C = '0') then
+						AB_Reg <= op2_out(1 DOWNTO 0);
+						sel_MUX_MEM	<= "010"; 
+					end if; 
+					
+				elsif (op_out = x"23") then
+					if(C = '0') then
+						const <= op2_out;
+						sel_MUX_MEM	<= "010"; 
+					end if; 
+				--JZ
+				elsif (op_out = x"24") then
+					if(Z = '1') then
+						AB_Reg <= op2_out(1 DOWNTO 0);
+						sel_MUX_MEM	<= "010"; 
+					end if; 
+					
+				elsif (op_out = x"25") then
+					if(Z = '1') then
+						const <= op2_out;
+						sel_MUX_MEM	<= "010"; 
+					end if; 
+				
+				elsif (op_out = x"26") then
+					if(Z = '0') then
+						AB_Reg <= op2_out(1 DOWNTO 0);
+						sel_MUX_MEM	<= "010"; 
+					end if; 
+					
+				elsif (op_out = x"27") then
+					if(Z = '0') then
+						const <= op2_out;
+						sel_MUX_MEM	<= "010"; 
+					end if; 
+				--JA
+				elsif (op_out = x"28") then
+					if(Z = '1' AND C = '1') then
+						AB_Reg <= op2_out(1 DOWNTO 0);
+						sel_MUX_MEM	<= "010"; 
+					end if; 
+					
+				elsif (op_out = x"29") then
+					if(Z = '1' AND C = '1') then
+						const <= op2_out;
+						sel_MUX_MEM	<= "010"; 
+					end if; 
+				
+				elsif (op_out = x"2A") then
+					if(Z = '0' AND C = '0') then
+						AB_Reg <= op2_out(1 DOWNTO 0);
+						sel_MUX_MEM	<= "010"; 
+					end if; 
+					
+				elsif (op_out = x"2B") then
+					if(Z = '0' AND C = '0') then
+						const <= op2_out;
+						sel_MUX_MEM	<= "010"; 
+					end if; 
+				
+				end if;		
+	
+			when JMP2 =>
+				if (op_out = x"1E") then
+					sel_PC <= "11";
+					count_PC <= '1';
+					
+				elsif (op_out = x"1F") then
+					const <= op2_out;
+					sel_PC <= "10";
+					count_PC <= '1';
+				
+				elsif (op_out = x"20") then
+					if(C = '1') then
+						sel_PC <= "11";
+						count_PC <= '1';
+					end if;
+					
+				elsif (op_out = x"21") then
+					if(C = '1') then
+						const <= op2_out;
+						sel_PC <= "10";
+						count_PC <= '1';
+					end if;
+				
+				elsif (op_out = x"22") then
+					if(C = '0') then
+						sel_PC <= "11";
+						count_PC <= '1';
+					end if;
+					
+				elsif (op_out = x"23") then
+					if(C = '0') then
+						const <= op2_out;
+						sel_PC <= "10";
+						count_PC <= '1';
+					end if;
+				--JZ
+				elsif (op_out = x"24") then
+					if(Z = '1') then
+						sel_PC <= "11";
+						count_PC <= '1';
+					end if;
+					
+				elsif (op_out = x"25") then
+					if(Z = '1') then
+						const <= op2_out;
+						sel_PC <= "10";
+						count_PC <= '1';
+					end if;
+				
+				elsif (op_out = x"26") then
+					if(Z = '0') then
+						sel_PC <= "11";
+						count_PC <= '1';
+					end if;
+					
+				elsif (op_out = x"27") then
+					if(Z = '0') then
+						const <= op2_out;
+						sel_PC <= "10";
+						count_PC <= '1';
+					end if;
+				--JA
+				elsif (op_out = x"28") then
+					if(Z = '1' AND C = '1') then
+						sel_PC <= "11";
+						count_PC <= '1';
+					end if;
+					
+				elsif (op_out = x"29") then
+					if(Z = '1' AND C = '1') then
+						const <= op2_out;
+						sel_PC <= "10";
+						count_PC <= '1';
+					end if;
+				
+				elsif (op_out = x"2A") then
+					if(Z = '0' AND C = '0') then
+						sel_PC <= "11";
+						count_PC <= '1';
+					end if;
+					
+				elsif (op_out = x"2B") then
+					if(Z = '0' AND C = '0') then
+						const <= op2_out;
+						sel_PC <= "10";
+						count_PC <= '1';
+					end if;
+				
+				
+				end if;
+				
+			when JMP3 =>
+				
 			
 			when STK =>
 			
@@ -377,7 +547,7 @@ begin
 				--CALL
 				if (op_out = x"37") then
 					count_PC <= '1';
-					sel_PC <= "00";
+					sel_PC <= "11";
 					
 				elsif (op_out = x"38") then	
 					--count_PC <= '1';
@@ -451,6 +621,7 @@ begin
 					AB_RegX <= op2_out(1 DOWNTO 0);
 					sel_MUX_ABCD_IN <= "01";
 					OP_sel <= "1011";
+					--clk_d <= '1';
 					
 				elsif (op_out = x"15") then
 					AB_Reg <= op2_out(1 DOWNTO 0);
@@ -736,7 +907,7 @@ begin
 					sel_MUX_ULA <= "10";
 					AB_Reg <=op1_out(1 DOWNTO 0);
 					sel_MUX_ABCD_IN <= "01";
-					W_wr <= '1';
+					--W_wr <= '1';
 					clk_d <= '1';
 					OP_sel <= "1011";
 				
@@ -1109,16 +1280,16 @@ begin
 					
 				elsif (op_out = x"03") then
 					AB_Reg <=op1_out(1 DOWNTO 0);
-					--sel_MUX_MEM <= "010";
-					W_wr <= '1';
-					clk_d <= '1';
+					sel_MUX_MEM <= "010";
+					--W_wr <= '1';
+					--clk_d <= '1';
 					
 				elsif (op_out = x"04") then
 					sel_MUX_ABCD_IN <= "11";
 					const <= op2_out;
 					AB_reg <=op1_out(1 DOWNTO 0);
 					W_wr <= '1';
-					clk_d <= '1';
+					--clk_d <= '1';
 
 				elsif (op_out = x"05") then
 					sel_MUX_MEM <= "010";
@@ -1144,6 +1315,14 @@ begin
 					const2 <=op1_out;
 					Wa <= '1';
 
+				end if;
+				
+			when MOV3 =>
+				if (op_out = x"03") then
+						AB_Reg <=op1_out(1 DOWNTO 0);
+						W_wr <= '1';
+						--clk_d <= '1';
+						
 				end if;
 				
 			

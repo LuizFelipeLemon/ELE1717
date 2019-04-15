@@ -45,6 +45,7 @@ entity datapath is
 			
 			const  : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 			const2  : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+			PC_OUT_PROC : OUT std_LOGIC_VECTOR(7 downto 0);
 			
 			sel_MUX_ABCD    : IN STD_LOGIC_VECTOR (1 DOWNTO 0); -- MUXES
 			sel_MUX_ABCD_IN : IN STD_LOGIC_VECTOR (1 DOWNTO 0); -- MUXES
@@ -92,6 +93,7 @@ COMPONENT PC IS
 		sel		   : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
 		mem		   : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		const	      : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		const2      : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		out_PC		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
 	);
 END COMPONENT;
@@ -157,7 +159,7 @@ SIGNAL ULA             : STD_LOGIC_VECTOR (7 DOWNTO 0);
 
 BEGIN
 
-	ProCnt : PC PORT MAP(count_PC,clk,sel_PC,mem,const,out_PC);
+	ProCnt : PC PORT MAP(count_PC,clk,sel_PC,mem,const,BRy,out_PC);
 	
 	Stack  : SP PORT MAP(count_SP,clk,push_pop,sel_SP,out_SP1);
 	
@@ -181,7 +183,7 @@ BEGIN
 	
 	op2 : reg PORT MAP(mem,op2_out,'1',op2_ld,'0');
 	
-	
+	PC_OUT_PROC <= out_PC;
 	
 	ULAO <= out_MUX_ABCD_IN; 
 	BEX <= BRx;

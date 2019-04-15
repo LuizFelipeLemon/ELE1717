@@ -1,0 +1,503 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/luiz/Documents/projects/ELE1717/processor/simulation/modelsim
+Eadd
+Z1 w1553913477
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/home/luiz/Documents/projects/ELE1717/processor/add.vhd
+Z5 F/home/luiz/Documents/projects/ELE1717/processor/add.vhd
+l0
+L42
+VzWXF;A:eVOk_`Qa3MdzX[2
+!s100 Z<J8ll7YYM1a^`P0iRoXF2
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1554731421
+!i10b 1
+Z8 !s108 1554731421.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/luiz/Documents/projects/ELE1717/processor/add.vhd|
+Z10 !s107 /home/luiz/Documents/projects/ELE1717/processor/add.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Asyn
+R2
+R3
+DEx4 work 3 add 0 22 zWXF;A:eVOk_`Qa3MdzX[2
+l78
+L54
+VEl=C9QZgT05615ilKN^lz3
+!s100 FC1AL1fJ9Ulh35VbTizAJ3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eb_ula
+Z13 w1554570869
+Z14 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z15 8/home/luiz/Documents/projects/ELE1717/processor/B_ULA.vhd
+Z16 F/home/luiz/Documents/projects/ELE1717/processor/B_ULA.vhd
+l0
+L6
+VT^XGjUIlSGMzYHe0BXeAd0
+!s100 W8CCJ_?h7I=3dlJ3hzVJd1
+R6
+31
+R7
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-93|-work|work|/home/luiz/Documents/projects/ELE1717/processor/B_ULA.vhd|
+Z18 !s107 /home/luiz/Documents/projects/ELE1717/processor/B_ULA.vhd|
+!i113 1
+R11
+R12
+Ackt
+R14
+R2
+R3
+DEx4 work 5 b_ula 0 22 T^XGjUIlSGMzYHe0BXeAd0
+l73
+L20
+VdD92WH3fo=JP>zLXDFk>c3
+!s100 ;9A^fSkm:]CfoZZU3b:^^3
+R6
+31
+R7
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
+Ecomp
+Z19 w1553945290
+R2
+R3
+R0
+Z20 8/home/luiz/Documents/projects/ELE1717/processor/comp.vhd
+Z21 F/home/luiz/Documents/projects/ELE1717/processor/comp.vhd
+l0
+L42
+VUDB@85?=2WeP>84_D=XdP2
+!s100 @6ha]^fh]c:O>ji]o<[1D0
+R6
+31
+R7
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-93|-work|work|/home/luiz/Documents/projects/ELE1717/processor/comp.vhd|
+Z23 !s107 /home/luiz/Documents/projects/ELE1717/processor/comp.vhd|
+!i113 1
+R11
+R12
+Asyn
+R2
+R3
+DEx4 work 4 comp 0 22 UDB@85?=2WeP>84_D=XdP2
+l71
+L52
+Ve0WQ668[I5>N3Lg<92QSA2
+!s100 N<]43EeI7Jg7kzjGNLl:f3
+R6
+31
+R7
+!i10b 1
+R8
+R22
+R23
+!i113 1
+R11
+R12
+Econtrol_block
+Z24 w1554731366
+R2
+R3
+R0
+Z25 8/home/luiz/Documents/projects/ELE1717/processor/control_block.vhd
+Z26 F/home/luiz/Documents/projects/ELE1717/processor/control_block.vhd
+l0
+L4
+V5VbU[=EkfZ;WW[R[3nOlZ1
+!s100 K7_RBzh6kJ^@QEE>X9O1;1
+R6
+31
+Z27 !s110 1554731422
+!i10b 1
+R8
+Z28 !s90 -reportprogress|300|-93|-work|work|/home/luiz/Documents/projects/ELE1717/processor/control_block.vhd|
+Z29 !s107 /home/luiz/Documents/projects/ELE1717/processor/control_block.vhd|
+!i113 1
+R11
+R12
+Ackt
+R2
+R3
+DEx4 work 13 control_block 0 22 5VbU[=EkfZ;WW[R[3nOlZ1
+l58
+L44
+VeiX]Ej0Uh1:2db;lO^CJz1
+!s100 XkkAdz`FO5[QjnhjjkPoD0
+R6
+31
+R27
+!i10b 1
+R8
+R28
+R29
+!i113 1
+R11
+R12
+Edatapath
+Z30 w1554676262
+R2
+R3
+R0
+Z31 8/home/luiz/Documents/projects/ELE1717/processor/datapath.vhd
+Z32 F/home/luiz/Documents/projects/ELE1717/processor/datapath.vhd
+l0
+L4
+V38>kG=PNi]aaa83D<D<301
+!s100 cIU>Aom>fKaAS3aS5Gd7=0
+R6
+31
+R7
+!i10b 1
+R8
+Z33 !s90 -reportprogress|300|-93|-work|work|/home/luiz/Documents/projects/ELE1717/processor/datapath.vhd|
+Z34 !s107 /home/luiz/Documents/projects/ELE1717/processor/datapath.vhd|
+!i113 1
+R11
+R12
+Ackt
+R2
+R3
+DEx4 work 8 datapath 0 22 38>kG=PNi]aaa83D<D<301
+l159
+L58
+VZHIAK08;eK09bfR[hJm@d0
+!s100 n7Q?zO8m3neiX0:HoT0j]1
+R6
+31
+R7
+!i10b 1
+R8
+R33
+R34
+!i113 1
+R11
+R12
+Emul
+Z35 w1553913077
+R2
+R3
+R0
+Z36 8/home/luiz/Documents/projects/ELE1717/processor/mul.vhd
+Z37 F/home/luiz/Documents/projects/ELE1717/processor/mul.vhd
+l0
+L42
+VmCH2GnZ<0de^Azh7G@3o[0
+!s100 ]XViW9ImS?J[5;eof36<k0
+R6
+31
+R7
+!i10b 1
+R8
+Z38 !s90 -reportprogress|300|-93|-work|work|/home/luiz/Documents/projects/ELE1717/processor/mul.vhd|
+Z39 !s107 /home/luiz/Documents/projects/ELE1717/processor/mul.vhd|
+!i113 1
+R11
+R12
+Asyn
+R2
+R3
+DEx4 work 3 mul 0 22 mCH2GnZ<0de^Azh7G@3o[0
+l74
+L52
+V`WWVblD;ozF]hMk6clVRo3
+!s100 CRA7]CgnJ;5_bcBBeH=P=3
+R6
+31
+R7
+!i10b 1
+R8
+R38
+R39
+!i113 1
+R11
+R12
+Emux1
+Z40 w1553891409
+R2
+R3
+R0
+Z41 8/home/luiz/Documents/projects/ELE1717/processor/mux1.vhd
+Z42 F/home/luiz/Documents/projects/ELE1717/processor/mux1.vhd
+l0
+L4
+VG`EAAQFZR@k6zB[Q[BQLb3
+!s100 c9oo3Og3ko[E99Jm>EnQ41
+R6
+31
+R7
+!i10b 1
+R8
+Z43 !s90 -reportprogress|300|-93|-work|work|/home/luiz/Documents/projects/ELE1717/processor/mux1.vhd|
+Z44 !s107 /home/luiz/Documents/projects/ELE1717/processor/mux1.vhd|
+!i113 1
+R11
+R12
+Ackt
+R2
+R3
+DEx4 work 4 mux1 0 22 G`EAAQFZR@k6zB[Q[BQLb3
+l17
+L16
+VS[m>]lKbgYgXf]?k790F`2
+!s100 k]NQTK=KbXXln]<1ZaG4f1
+R6
+31
+R7
+!i10b 1
+R8
+R43
+R44
+!i113 1
+R11
+R12
+Epc
+Z45 w1554676236
+R2
+R3
+R0
+Z46 8/home/luiz/Documents/projects/ELE1717/processor/PC.vhd
+Z47 F/home/luiz/Documents/projects/ELE1717/processor/PC.vhd
+l0
+L4
+VF>1cjm90aeZQT0F1T?zW=3
+!s100 _M48jj6F9=5T^B7=FDK0e0
+R6
+31
+R7
+!i10b 1
+R8
+Z48 !s90 -reportprogress|300|-93|-work|work|/home/luiz/Documents/projects/ELE1717/processor/PC.vhd|
+Z49 !s107 /home/luiz/Documents/projects/ELE1717/processor/PC.vhd|
+!i113 1
+R11
+R12
+Ackt
+R2
+R3
+DEx4 work 2 pc 0 22 F>1cjm90aeZQT0F1T?zW=3
+l57
+L17
+V8z6jI3j;gP<RhLjUGYlUe1
+!s100 55@UliJZ1g_89NVTl8FdO1
+R6
+31
+R7
+!i10b 1
+R8
+R48
+R49
+!i113 1
+R11
+R12
+Eprocessor
+w1554722353
+R2
+R3
+R0
+8/home/luiz/Documents/projects/ELE1717/processor/processor.vhd
+F/home/luiz/Documents/projects/ELE1717/processor/processor.vhd
+l0
+L4
+VzJU86Ae:FRAjBz44I:XJ<1
+!s100 4hdDI=g6iR6j6H5T?4a;N0
+R6
+31
+R27
+!i10b 1
+!s108 1554731422.000000
+!s90 -reportprogress|300|-93|-work|work|/home/luiz/Documents/projects/ELE1717/processor/processor.vhd|
+!s107 /home/luiz/Documents/projects/ELE1717/processor/processor.vhd|
+!i113 1
+R11
+R12
+Eram
+Z50 w1553866003
+R2
+R3
+R0
+Z51 8/home/luiz/Documents/projects/ELE1717/processor/ram.vhd
+Z52 F/home/luiz/Documents/projects/ELE1717/processor/ram.vhd
+l0
+L42
+VWfi4aL79m9>CSg2khVJ>f2
+!s100 ^4klLTc;=9OT3NI7mhU[<2
+R6
+31
+R7
+!i10b 1
+R8
+Z53 !s90 -reportprogress|300|-93|-work|work|/home/luiz/Documents/projects/ELE1717/processor/ram.vhd|
+Z54 !s107 /home/luiz/Documents/projects/ELE1717/processor/ram.vhd|
+!i113 1
+R11
+R12
+Asyn
+R2
+R3
+DEx4 work 3 ram 0 22 Wfi4aL79m9>CSg2khVJ>f2
+l106
+L58
+Vlh5TlFC6@h4H]h44[=5d33
+!s100 3GC1:2Xb1;Q[0<9gQf]WW0
+R6
+31
+R7
+!i10b 1
+R8
+R53
+R54
+!i113 1
+R11
+R12
+Ereg
+Z55 w1553867270
+R2
+R3
+R0
+Z56 8/home/luiz/Documents/projects/ELE1717/processor/reg.vhd
+Z57 F/home/luiz/Documents/projects/ELE1717/processor/reg.vhd
+l0
+L3
+V_fWbgU>GceZg9bG_8J?U?0
+!s100 PgU[nS71e;8McMRHQS4@D0
+R6
+31
+R7
+!i10b 1
+R8
+Z58 !s90 -reportprogress|300|-93|-work|work|/home/luiz/Documents/projects/ELE1717/processor/reg.vhd|
+Z59 !s107 /home/luiz/Documents/projects/ELE1717/processor/reg.vhd|
+!i113 1
+R11
+R12
+Asimple
+R2
+R3
+DEx4 work 3 reg 0 22 _fWbgU>GceZg9bG_8J?U?0
+l13
+L11
+VW>f7Yjzlb]eFS8ES:_OS70
+!s100 ;midmzzOTIM<16ZB]6[Dm2
+R6
+31
+R7
+!i10b 1
+R8
+R58
+R59
+!i113 1
+R11
+R12
+Eregister_bank
+Z60 w1554036352
+R14
+R2
+R3
+R0
+Z61 8/home/luiz/Documents/projects/ELE1717/processor/register_bank.vhd
+Z62 F/home/luiz/Documents/projects/ELE1717/processor/register_bank.vhd
+l0
+L5
+VzGMGzU?M:<_hIIWG0EaWa3
+!s100 L`5^:YW71C^<JT37h<9b`3
+R6
+31
+R7
+!i10b 1
+R8
+Z63 !s90 -reportprogress|300|-93|-work|work|/home/luiz/Documents/projects/ELE1717/processor/register_bank.vhd|
+Z64 !s107 /home/luiz/Documents/projects/ELE1717/processor/register_bank.vhd|
+!i113 1
+R11
+R12
+Ackt
+R14
+R2
+R3
+DEx4 work 13 register_bank 0 22 zGMGzU?M:<_hIIWG0EaWa3
+l24
+L18
+VjH@4J9[bYennciOHoiX7d3
+!s100 cj4V7:mVBUfT4k;ZzMfdf0
+R6
+31
+R7
+!i10b 1
+R8
+R63
+R64
+!i113 1
+R11
+R12
+Esp
+Z65 w1553910119
+R2
+R3
+R0
+Z66 8/home/luiz/Documents/projects/ELE1717/processor/SP.vhd
+Z67 F/home/luiz/Documents/projects/ELE1717/processor/SP.vhd
+l0
+L4
+VhfJHOb3IYOYD_GY4f<fPZ1
+!s100 cVgjWz]Xf`Wa3kl633e812
+R6
+31
+R7
+!i10b 1
+R8
+Z68 !s90 -reportprogress|300|-93|-work|work|/home/luiz/Documents/projects/ELE1717/processor/SP.vhd|
+Z69 !s107 /home/luiz/Documents/projects/ELE1717/processor/SP.vhd|
+!i113 1
+R11
+R12
+Ackt
+R2
+R3
+DEx4 work 2 sp 0 22 hfJHOb3IYOYD_GY4f<fPZ1
+l53
+L15
+V`IkDcoR1Q_ZRb:o0l1L=o2
+!s100 `WoKeVBzTmzKdjOTMcN?H3
+R6
+31
+R7
+!i10b 1
+R8
+R68
+R69
+!i113 1
+R11
+R12

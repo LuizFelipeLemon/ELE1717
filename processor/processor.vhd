@@ -4,13 +4,14 @@ USE ieee.std_logic_1164.all;
 ENTITY processor IS
 	PORT
 	(
-		r,clk : in std_logic;
+		r,clk,b_bs : in std_logic;
 		address_b		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-		data_b		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		--data_b		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		wren_b		: IN STD_LOGIC  := '0';
-		q_b		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+		--q_b		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
 		C        : OUT STD_LOGIC;                    -- ULA
 		Z        : OUT STD_LOGIC;                    -- ULA
+		hex0,hex1,hex2,hex3,hex4 : out std_logic_vector(6 downto 0);
 
 		t_op_out : OUT std_LOGIC_VECTOR(7 downto 0);    -- OPCODE Register
 		t_op_ld  : OUT STD_LOGIC;                       -- OPCODE Register
@@ -22,7 +23,7 @@ ENTITY processor IS
 		t_Aa     :  OUT STD_LOGIC_VECTOR(7 DOWNTO 0); -- RAM
 		t_Da     :  OUT STD_LOGIC_VECTOR(7 DOWNTO 0); -- RAM
 		t_mem    :  OUT STD_LOGIC_VECTOR(7 DOWNTO 0); -- RAM
-		t_Wa,t_clk_d,t_z     :  OUT STD_LOGIC;                    -- RAM
+		t_Wa,t_clk_d,t_z,t_c     :  OUT STD_LOGIC;                    -- RAM
 
 		
 		t_count_PC  :  OUT STD_LOGIC;						 --PC
@@ -48,7 +49,7 @@ ARCHITECTURE ckt OF processor IS
 
 COMPONENT ram IS
 	PORT
-	(
+	( 
 		address_a		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		address_b		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		clock		: IN STD_LOGIC  := '1';
@@ -104,6 +105,7 @@ COMPONENT datapath is
 			
 			const  : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 			const2  : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+			PC_OUT_PROC : OUT std_LOGIC_VECTOR(7 downto 0);
 			
 			sel_MUX_ABCD    : IN STD_LOGIC_VECTOR (1 DOWNTO 0); -- MUXES
 			sel_MUX_ABCD_IN : IN STD_LOGIC_VECTOR (1 DOWNTO 0); -- MUXES
@@ -117,7 +119,7 @@ end COMPONENT;
 COMPONENT control_block IS
 	PORT
 	(
-		r,clk : in std_logic;
+		r,clk,Z,C : in std_logic;
 		Wa,clk_d    : OUT STD_LOGIC;
 		
 		count_PC  : OUT STD_LOGIC;						 --PC
@@ -166,8 +168,30 @@ COMPONENT ffd is
         );
 end COMPONENT;
 
+COMPONENT BINBCD16 is
+    port(  BINBCD_in: in std_logic_vector(15 downto 0) ;
+            BINBCD_out : out std_logic_vector(19 downto 0) 
+        );
+end COMPONENT;
+
+component seg7 is
+	port(A: in std_logic_vector(3 downto 0);
+		SD: out std_logic_vector(6 downto 0));
+end component;
+
+component CLK_Div is
+    port (clk_in            : in  std_logic ;
+          clk_out : out std_logic );
+end component;
 
 
+
+
+
+COMPONENT button is
+    port (clk , r, bi: in std_logic ;
+            bo : out std_logic);
+end COMPONENT ;
 
 SIGNAL Aa     :  STD_LOGIC_VECTOR(7 DOWNTO 0); -- RAM
 SIGNAL Da     :  STD_LOGIC_VECTOR(7 DOWNTO 0); -- RAM
@@ -203,6 +227,7 @@ SIGNAL  op2_ld  :  STD_LOGIC;                       -- OPERAND 2 Register
 
 SIGNAL const  : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL const2  :  STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL PC_OUT_PROC : std_LOGIC_VECTOR(7 downto 0);
 
 SIGNAL  sel_MUX_ABCD    : STD_LOGIC_VECTOR (1 DOWNTO 0); -- MUXES
 SIGNAL  sel_MUX_ABCD_IN : STD_LOGIC_VECTOR (1 DOWNTO 0); -- MUXES
@@ -210,25 +235,57 @@ SIGNAL  sel_MUX_Da      : STD_LOGIC_VECTOR (1 DOWNTO 0); -- MUXES
 SIGNAL  sel_MUX_ULA     : STD_LOGIC_VECTOR (1 DOWNTO 0); -- MUXES
 SIGNAL  sel_MUX_MEM     : STD_LOGIC_VECTOR (2 DOWNTO 0); -- MUXES
 
-SIGNAL clk_d, Z_q : STD_LOGIC;
+SIGNAL clk_d,C_q, Z_q : STD_LOGIC;
+SIGNAL Z_p,C_p : STD_LOGIC;
+
+signal q_b		: STD_LOGIC_VECTOR (7 DOWNTO 0);
+signal clk_m : std_logic;
+signal BINBCD_out,BINBCD_out_2 :  std_logic_vector(19 downto 0);
+signal seg71,seg72,seg73,seg74,seg75		: STD_LOGIC_VECTOR (3 DOWNTO 0);
+--signal clk : STD_LOGIC;
 
 
 
 begin 
 
-	ram1 : ram PORT MAP(Aa,address_b,clk,Da,data_b,Wa,'0',mem,q_b);
+	ram1 : ram PORT MAP(Aa,address_b,clk,Da,"00000000",Wa,'0',mem,q_b);
 
-	DPTH : datapath PORT MAP(Aa,Da,mem,count_PC,sel_PC,count_SP,push_pop,sel_SP,out_SP,C,Z_q,OP_sel,clk,
+	DPTH : datapath PORT MAP(Aa,Da,mem,count_PC,sel_PC,count_SP,push_pop,sel_SP,out_SP,C_q,Z_q,OP_sel,clk,
 							 AB_Reg,AB_RegX,W_wr,open,open,open,op_out,op_ld,op1_out,op1_ld,
-							 op2_out,op2_ld,const,const2,sel_MUX_ABCD,sel_MUX_ABCD_IN,sel_MUX_Da,sel_MUX_ULA,    
+							 op2_out,op2_ld,const,const2,PC_OUT_PROC,sel_MUX_ABCD,sel_MUX_ABCD_IN,sel_MUX_Da,sel_MUX_ULA,    
 							 sel_MUX_MEM);
 
-	ctr : control_block PORT MAP(r,clk,Wa,clk_d,count_PC,sel_PC,count_SP,push_pop,sel_SP,out_SP,OP_sel,
+	ctr : control_block PORT MAP(r,clk,Z_p,C_p,Wa,clk_d,count_PC,sel_PC,count_SP,push_pop,sel_SP,out_SP,OP_sel,
 	AB_Reg,AB_RegX,W_wr,op_out,op_ld,op1_out,op1_ld,
 	op2_out,op2_ld,const,const2,sel_MUX_ABCD,sel_MUX_ABCD_IN,sel_MUX_Da,sel_MUX_ULA,    
 	sel_MUX_MEM);
+	
+	Z <= Z_p;
+	C <= C_p;
 
-	fili : ffd PORT MAP(clk AND clk_d,Z_q,'1','1',Z);
+	fili  : ffd PORT MAP(clk AND clk_d,Z_q,'1','1',Z_p);
+	filiC : ffd PORT MAP(clk AND clk_d,C_q,'1','1',C_p);
+	
+	--butao : button PORT MAP(clk_bs,'0',b_bs,clk);
+	
+	--BINBCD16 
+	BINBDC  : BINBCD16 port map(BINBCD_in(15 downto 8) => "00000000",BINBCD_in(7 downto 0) => q_b,BINBCD_out => BINBCD_out);
+	
+	--BINBDC2  : BINBCD16 port map(BINBCD_in(15 downto 8) => "00000000",BINBCD_in(7 downto 0) => Aa,BINBCD_out => BINBCD_out_2);
+	
+	--div : CLK_Div port map(clk_bs, clk);
+	
+	seg71 <= BINBCD_out(3 downto 0);
+	seg72 <= BINBCD_out(7 downto 4);
+	seg73 <= BINBCD_out(11 downto 8);
+	seg74 <= BINBCD_out(15 downto 12);
+	--seg75 <= BINBCD_out_2(7 downto 4);
+	
+	disp1 : seg7 port map(seg71,hex0);
+	disp2 : seg7 port map(seg72,hex1);
+	disp3 : seg7 port map(seg73,hex2);
+	disp4 : seg7 port map(seg74,hex3);
+	--disp5 : seg7 port map(seg75,hex4);
 
 	t_op_out  <= op_out ;
 	t_op_ld   <= op_ld;
@@ -259,6 +316,7 @@ begin
 	t_Wa <= Wa ;
 	t_clk_d <= clk_d;
 	t_z <= z_q;
+	t_c <= C_q;
 
 END ckt;
 

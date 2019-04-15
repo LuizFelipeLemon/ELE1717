@@ -1,0 +1,163 @@
+# do processor_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying /home/luiz/intelFPGA/18.1/modelsim_ase/linuxaloem/../modelsim.ini
+# 
+# vcom -93 -work work {/home/luiz/Documents/projects/ELE1717/processor/ram.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:50:21 on Apr 08,2019
+# vcom -reportprogress 300 -93 -work work /home/luiz/Documents/projects/ELE1717/processor/ram.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ram
+# -- Compiling architecture SYN of ram
+# End time: 10:50:21 on Apr 08,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/luiz/Documents/projects/ELE1717/processor/reg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:50:21 on Apr 08,2019
+# vcom -reportprogress 300 -93 -work work /home/luiz/Documents/projects/ELE1717/processor/reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg
+# -- Compiling architecture SIMPLE of reg
+# End time: 10:50:21 on Apr 08,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/luiz/Documents/projects/ELE1717/processor/mux1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:50:21 on Apr 08,2019
+# vcom -reportprogress 300 -93 -work work /home/luiz/Documents/projects/ELE1717/processor/mux1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux1
+# -- Compiling architecture ckt of mux1
+# End time: 10:50:21 on Apr 08,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/luiz/Documents/projects/ELE1717/processor/add.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:50:21 on Apr 08,2019
+# vcom -reportprogress 300 -93 -work work /home/luiz/Documents/projects/ELE1717/processor/add.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity add
+# -- Compiling architecture SYN of add
+# End time: 10:50:21 on Apr 08,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/luiz/Documents/projects/ELE1717/processor/PC.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:50:21 on Apr 08,2019
+# vcom -reportprogress 300 -93 -work work /home/luiz/Documents/projects/ELE1717/processor/PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PC
+# -- Compiling architecture ckt of PC
+# End time: 10:50:21 on Apr 08,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/luiz/Documents/projects/ELE1717/processor/SP.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:50:21 on Apr 08,2019
+# vcom -reportprogress 300 -93 -work work /home/luiz/Documents/projects/ELE1717/processor/SP.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SP
+# -- Compiling architecture ckt of SP
+# End time: 10:50:21 on Apr 08,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/luiz/Documents/projects/ELE1717/processor/register_bank.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:50:21 on Apr 08,2019
+# vcom -reportprogress 300 -93 -work work /home/luiz/Documents/projects/ELE1717/processor/register_bank.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity register_bank
+# -- Compiling architecture ckt of register_bank
+# End time: 10:50:21 on Apr 08,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/luiz/Documents/projects/ELE1717/processor/B_ULA.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:50:21 on Apr 08,2019
+# vcom -reportprogress 300 -93 -work work /home/luiz/Documents/projects/ELE1717/processor/B_ULA.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity B_ULA
+# -- Compiling architecture ckt of B_ULA
+# End time: 10:50:21 on Apr 08,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/luiz/Documents/projects/ELE1717/processor/mul.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:50:21 on Apr 08,2019
+# vcom -reportprogress 300 -93 -work work /home/luiz/Documents/projects/ELE1717/processor/mul.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mul
+# -- Compiling architecture SYN of mul
+# End time: 10:50:21 on Apr 08,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/luiz/Documents/projects/ELE1717/processor/comp.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:50:21 on Apr 08,2019
+# vcom -reportprogress 300 -93 -work work /home/luiz/Documents/projects/ELE1717/processor/comp.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity comp
+# -- Compiling architecture SYN of comp
+# End time: 10:50:21 on Apr 08,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/luiz/Documents/projects/ELE1717/processor/datapath.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:50:21 on Apr 08,2019
+# vcom -reportprogress 300 -93 -work work /home/luiz/Documents/projects/ELE1717/processor/datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity datapath
+# -- Compiling architecture ckt of datapath
+# End time: 10:50:21 on Apr 08,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/luiz/Documents/projects/ELE1717/processor/control_block.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:50:21 on Apr 08,2019
+# vcom -reportprogress 300 -93 -work work /home/luiz/Documents/projects/ELE1717/processor/control_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity control_block
+# -- Compiling architecture ckt of control_block
+# End time: 10:50:22 on Apr 08,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/luiz/Documents/projects/ELE1717/processor/processor.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:50:22 on Apr 08,2019
+# vcom -reportprogress 300 -93 -work work /home/luiz/Documents/projects/ELE1717/processor/processor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity processor
+# -- Compiling architecture ckt of processor
+# ** Error: /home/luiz/Documents/projects/ELE1717/processor/processor.vhd(235): (vcom-1436) Actual expression (infix expression) of formal "clk" is not globally static.
+# ** Error: /home/luiz/Documents/projects/ELE1717/processor/processor.vhd(236): (vcom-1436) Actual expression (infix expression) of formal "clk" is not globally static.
+# ** Error: /home/luiz/Documents/projects/ELE1717/processor/processor.vhd(269): VHDL Compiler exiting
+# End time: 10:50:22 on Apr 08,2019, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: /home/luiz/intelFPGA/18.1/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./processor_run_msim_rtl_vhdl.do line 20
+# /home/luiz/intelFPGA/18.1/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {/home/luiz/Documents/projects/ELE1717/processor/processor.vhd}"

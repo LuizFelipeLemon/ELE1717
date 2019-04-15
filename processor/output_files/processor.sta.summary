@@ -3,40 +3,48 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'clk'
-Slack : -4.777
-TNS   : -307.925
-
-Type  : Slow Model Setup 'control_block:ctr|y_present.OPR2'
-Slack : -3.611
-TNS   : -27.489
+Slack : -14.338
+TNS   : -1082.248
 
 Type  : Slow Model Setup 'control_block:ctr|y_present.search'
-Slack : -3.390
-TNS   : -26.832
+Slack : -4.102
+TNS   : -32.528
+
+Type  : Slow Model Setup 'control_block:ctr|y_present.OPR2'
+Slack : -2.773
+TNS   : -21.732
 
 Type  : Slow Model Setup 'control_block:ctr|y_present.OPR'
-Slack : -3.374
-TNS   : -26.298
+Slack : -2.704
+TNS   : -19.295
 
-Type  : Slow Model Hold 'clk'
-Slack : -2.263
-TNS   : -21.911
-
-Type  : Slow Model Hold 'control_block:ctr|y_present.OPR'
-Slack : 3.982
+Type  : Slow Model Setup 'control_block:ctr|y_present.ERRO'
+Slack : 0.121
 TNS   : 0.000
 
-Type  : Slow Model Hold 'control_block:ctr|y_present.search'
-Slack : 4.099
+Type  : Slow Model Hold 'clk'
+Slack : -2.799
+TNS   : -9.246
+
+Type  : Slow Model Hold 'control_block:ctr|y_present.ERRO'
+Slack : -0.652
+TNS   : -4.064
+
+Type  : Slow Model Hold 'control_block:ctr|y_present.OPR'
+Slack : 2.934
 TNS   : 0.000
 
 Type  : Slow Model Hold 'control_block:ctr|y_present.OPR2'
-Slack : 4.130
+Slack : 3.335
+TNS   : 0.000
+
+Type  : Slow Model Hold 'control_block:ctr|y_present.search'
+Slack : 4.818
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'clk'
 Slack : -2.000
-TNS   : -266.380
+TNS   : -312.148
 
 Type  : Slow Model Minimum Pulse Width 'control_block:ctr|y_present.OPR'
 Slack : -0.500
@@ -50,41 +58,53 @@ Type  : Slow Model Minimum Pulse Width 'control_block:ctr|y_present.search'
 Slack : -0.500
 TNS   : -8.000
 
-Type  : Fast Model Setup 'clk'
-Slack : -2.217
-TNS   : -122.590
-
-Type  : Fast Model Setup 'control_block:ctr|y_present.OPR2'
-Slack : -1.797
-TNS   : -13.784
-
-Type  : Fast Model Setup 'control_block:ctr|y_present.search'
-Slack : -1.718
-TNS   : -13.478
-
-Type  : Fast Model Setup 'control_block:ctr|y_present.OPR'
-Slack : -1.695
-TNS   : -13.173
-
-Type  : Fast Model Hold 'clk'
-Slack : -1.473
-TNS   : -33.938
-
-Type  : Fast Model Hold 'control_block:ctr|y_present.OPR'
-Slack : 2.494
+Type  : Slow Model Minimum Pulse Width 'control_block:ctr|y_present.ERRO'
+Slack : 0.500
 TNS   : 0.000
 
-Type  : Fast Model Hold 'control_block:ctr|y_present.search'
-Slack : 2.548
+Type  : Fast Model Setup 'clk'
+Slack : -5.410
+TNS   : -407.471
+
+Type  : Fast Model Setup 'control_block:ctr|y_present.search'
+Slack : -2.279
+TNS   : -17.932
+
+Type  : Fast Model Setup 'control_block:ctr|y_present.OPR2'
+Slack : -1.376
+TNS   : -10.737
+
+Type  : Fast Model Setup 'control_block:ctr|y_present.OPR'
+Slack : -1.324
+TNS   : -9.511
+
+Type  : Fast Model Setup 'control_block:ctr|y_present.ERRO'
+Slack : 0.554
+TNS   : 0.000
+
+Type  : Fast Model Hold 'clk'
+Slack : -1.497
+TNS   : -5.829
+
+Type  : Fast Model Hold 'control_block:ctr|y_present.ERRO'
+Slack : -0.203
+TNS   : -1.007
+
+Type  : Fast Model Hold 'control_block:ctr|y_present.OPR'
+Slack : 1.970
 TNS   : 0.000
 
 Type  : Fast Model Hold 'control_block:ctr|y_present.OPR2'
-Slack : 2.565
+Slack : 2.127
+TNS   : 0.000
+
+Type  : Fast Model Hold 'control_block:ctr|y_present.search'
+Slack : 3.108
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'clk'
 Slack : -2.000
-TNS   : -266.380
+TNS   : -313.684
 
 Type  : Fast Model Minimum Pulse Width 'control_block:ctr|y_present.OPR'
 Slack : -0.500
@@ -97,5 +117,9 @@ TNS   : -8.000
 Type  : Fast Model Minimum Pulse Width 'control_block:ctr|y_present.search'
 Slack : -0.500
 TNS   : -8.000
+
+Type  : Fast Model Minimum Pulse Width 'control_block:ctr|y_present.ERRO'
+Slack : 0.500
+TNS   : 0.000
 
 ------------------------------------------------------------

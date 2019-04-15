@@ -9,6 +9,7 @@ ENTITY PC IS
 		sel		   : IN STD_LOGIC_VECTOR (1 DOWNTO 0);
 		mem		   : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		const	      : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		const2      : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
 		out_PC		: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
 	);
 END PC;
@@ -57,7 +58,7 @@ BEGIN
 	
 	PC_reg : reg  port map(mux_out,reg_out,count,clk,'0');
 	PC_adder : add  port map('1',reg_out,"00000001",OPEN,add_out);
-	PC_mux : mux1 port map(mem,add_out,const,"00000000",sel,mux_out);
+	PC_mux : mux1 port map(mem,add_out,const,const2,sel,mux_out);
 	out_PC <= reg_out;
 
 

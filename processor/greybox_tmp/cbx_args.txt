@@ -5,3 +5,5 @@ DEVICE_FAMILY="Cyclone II"
 dataa
 datab
 aeb
+agb
+alb

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processor
-Sat Apr  6 20:51:59 2019
+Mon Apr 15 10:17:29 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -31,25 +31,29 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  23. Parameter Settings for User Entity Instance: datapath:DPTH|B_ULA:LULA|comp:cmpa|lpm_compare:LPM_COMPARE_component
  24. altsyncram Parameter Settings by Entity Instance
  25. lpm_mult Parameter Settings by Entity Instance
- 26. Port Connectivity Checks: "ffd:fili"
- 27. Port Connectivity Checks: "datapath:DPTH|reg:op2"
- 28. Port Connectivity Checks: "datapath:DPTH|reg:op1"
- 29. Port Connectivity Checks: "datapath:DPTH|reg:op"
- 30. Port Connectivity Checks: "datapath:DPTH|B_ULA:LULA|mul:mult"
- 31. Port Connectivity Checks: "datapath:DPTH|B_ULA:LULA|add:inc"
- 32. Port Connectivity Checks: "datapath:DPTH|mux1:MUX_ULA"
- 33. Port Connectivity Checks: "datapath:DPTH|register_bank:ABCD"
- 34. Port Connectivity Checks: "datapath:DPTH|mux1:MUX_ABC"
- 35. Port Connectivity Checks: "datapath:DPTH|SP:Stack|mux1:SP_mux"
- 36. Port Connectivity Checks: "datapath:DPTH|SP:Stack|add:SP_adder"
- 37. Port Connectivity Checks: "datapath:DPTH|SP:Stack|reg:SP_reg"
- 38. Port Connectivity Checks: "datapath:DPTH|PC:ProCnt|mux1:PC_mux"
- 39. Port Connectivity Checks: "datapath:DPTH|PC:ProCnt|add:PC_adder"
- 40. Port Connectivity Checks: "datapath:DPTH|PC:ProCnt|reg:PC_reg"
- 41. Port Connectivity Checks: "datapath:DPTH"
- 42. Port Connectivity Checks: "ram:ram1"
- 43. Elapsed Time Per Partition
- 44. Analysis & Synthesis Messages
+ 26. Port Connectivity Checks: "BINBCD16:BINBDC|ADD3:add30"
+ 27. Port Connectivity Checks: "BINBCD16:BINBDC|ADD3:add23"
+ 28. Port Connectivity Checks: "BINBCD16:BINBDC|ADD3:add13"
+ 29. Port Connectivity Checks: "BINBCD16:BINBDC|ADD3:add0"
+ 30. Port Connectivity Checks: "BINBCD16:BINBDC"
+ 31. Port Connectivity Checks: "ffd:filiC"
+ 32. Port Connectivity Checks: "ffd:fili"
+ 33. Port Connectivity Checks: "datapath:DPTH|reg:op2"
+ 34. Port Connectivity Checks: "datapath:DPTH|reg:op1"
+ 35. Port Connectivity Checks: "datapath:DPTH|reg:op"
+ 36. Port Connectivity Checks: "datapath:DPTH|B_ULA:LULA|add:inc"
+ 37. Port Connectivity Checks: "datapath:DPTH|mux1:MUX_ULA"
+ 38. Port Connectivity Checks: "datapath:DPTH|register_bank:ABCD"
+ 39. Port Connectivity Checks: "datapath:DPTH|mux1:MUX_ABC"
+ 40. Port Connectivity Checks: "datapath:DPTH|SP:Stack|mux1:SP_mux"
+ 41. Port Connectivity Checks: "datapath:DPTH|SP:Stack|add:SP_adder"
+ 42. Port Connectivity Checks: "datapath:DPTH|SP:Stack|reg:SP_reg"
+ 43. Port Connectivity Checks: "datapath:DPTH|PC:ProCnt|add:PC_adder"
+ 44. Port Connectivity Checks: "datapath:DPTH|PC:ProCnt|reg:PC_reg"
+ 45. Port Connectivity Checks: "datapath:DPTH"
+ 46. Port Connectivity Checks: "ram:ram1"
+ 47. Elapsed Time Per Partition
+ 48. Analysis & Synthesis Messages
 
 
 
@@ -75,16 +79,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr  6 20:51:59 2019           ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 15 10:17:29 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; processor                                       ;
 ; Top-level Entity Name              ; processor                                       ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 865                                             ;
-;     Total combinational functions  ; 806                                             ;
-;     Dedicated logic registers      ; 112                                             ;
-; Total registers                    ; 112                                             ;
-; Total pins                         ; 110                                             ;
+; Total logic elements               ; 1,160                                           ;
+;     Total combinational functions  ; 1,098                                           ;
+;     Dedicated logic registers      ; 116                                             ;
+; Total registers                    ; 116                                             ;
+; Total pins                         ; 131                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 2,048                                           ;
 ; Embedded Multiplier 9-bit elements ; 1                                               ;
@@ -209,6 +213,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; processor.vhd                    ; yes             ; User VHDL File                   ; /home/luiz/Documents/projects/ELE1717/processor/processor.vhd                     ;         ;
 ; mux2.vhd                         ; yes             ; User VHDL File                   ; /home/luiz/Documents/projects/ELE1717/processor/mux2.vhd                          ;         ;
 ; ffd.vhd                          ; yes             ; User VHDL File                   ; /home/luiz/Documents/projects/ELE1717/processor/ffd.vhd                           ;         ;
+; BINBDC16.vhd                     ; yes             ; User VHDL File                   ; /home/luiz/Documents/projects/ELE1717/processor/BINBDC16.vhd                      ;         ;
+; ADD3.vhd                         ; yes             ; User VHDL File                   ; /home/luiz/Documents/projects/ELE1717/processor/ADD3.vhd                          ;         ;
+; seg7.vhd                         ; yes             ; User VHDL File                   ; /home/luiz/Documents/projects/ELE1717/processor/seg7.vhd                          ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                     ; /home/luiz/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                     ; /home/luiz/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                     ; /home/luiz/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
@@ -241,68 +248,82 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------------------+
 ; Resource                                    ; Usage                        ;
 +---------------------------------------------+------------------------------+
-; Estimated Total logic elements              ; 865                          ;
+; Estimated Total logic elements              ; 1,160                        ;
 ;                                             ;                              ;
-; Total combinational functions               ; 806                          ;
+; Total combinational functions               ; 1098                         ;
 ; Logic element usage by number of LUT inputs ;                              ;
-;     -- 4 input functions                    ; 565                          ;
-;     -- 3 input functions                    ; 173                          ;
-;     -- <=2 input functions                  ; 68                           ;
+;     -- 4 input functions                    ; 790                          ;
+;     -- 3 input functions                    ; 211                          ;
+;     -- <=2 input functions                  ; 97                           ;
 ;                                             ;                              ;
 ; Logic elements by mode                      ;                              ;
-;     -- normal mode                          ; 773                          ;
-;     -- arithmetic mode                      ; 33                           ;
+;     -- normal mode                          ; 1051                         ;
+;     -- arithmetic mode                      ; 47                           ;
 ;                                             ;                              ;
-; Total registers                             ; 112                          ;
-;     -- Dedicated logic registers            ; 112                          ;
+; Total registers                             ; 116                          ;
+;     -- Dedicated logic registers            ; 116                          ;
 ;     -- I/O registers                        ; 0                            ;
 ;                                             ;                              ;
-; I/O pins                                    ; 110                          ;
+; I/O pins                                    ; 131                          ;
 ; Total memory bits                           ; 2048                         ;
 ; Embedded Multiplier 9-bit elements          ; 1                            ;
 ; Maximum fan-out node                        ; datapath:DPTH|reg:op|DOUT[3] ;
-; Maximum fan-out                             ; 129                          ;
-; Total fan-out                               ; 3493                         ;
+; Maximum fan-out                             ; 173                          ;
+; Total fan-out                               ; 4565                         ;
 ; Average fan-out                             ; 3.37                         ;
 +---------------------------------------------+------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                     ;
-+-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Library Name ;
-+-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
-; |processor                                      ; 806 (2)           ; 112 (0)      ; 2048        ; 1            ; 1       ; 0         ; 110  ; 0            ; |processor                                                                                                 ; work         ;
-;    |control_block:ctr|                          ; 498 (498)         ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|control_block:ctr                                                                               ; work         ;
-;    |datapath:DPTH|                              ; 306 (0)           ; 88 (0)       ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH                                                                                   ; work         ;
-;       |B_ULA:LULA|                              ; 163 (135)         ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA                                                                        ; work         ;
-;          |add:adder|                            ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|add:adder                                                              ; work         ;
-;             |lpm_add_sub:LPM_ADD_SUB_component| ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|add:adder|lpm_add_sub:LPM_ADD_SUB_component                            ; work         ;
-;                |add_sub_61h:auto_generated|     ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|add:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_61h:auto_generated ; work         ;
-;          |add:inc|                              ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|add:inc                                                                ; work         ;
-;             |lpm_add_sub:LPM_ADD_SUB_component| ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|add:inc|lpm_add_sub:LPM_ADD_SUB_component                              ; work         ;
-;                |add_sub_61h:auto_generated|     ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|add:inc|lpm_add_sub:LPM_ADD_SUB_component|add_sub_61h:auto_generated   ; work         ;
-;          |mul:mult|                             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|mul:mult                                                               ; work         ;
-;             |lpm_mult:lpm_mult_component|       ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|mul:mult|lpm_mult:lpm_mult_component                                   ; work         ;
-;                |mult_a8n:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|mul:mult|lpm_mult:lpm_mult_component|mult_a8n:auto_generated           ; work         ;
-;       |PC:ProCnt|                               ; 16 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|PC:ProCnt                                                                         ; work         ;
-;          |mux1:PC_mux|                          ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|PC:ProCnt|mux1:PC_mux                                                             ; work         ;
-;          |reg:PC_reg|                           ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|PC:ProCnt|reg:PC_reg                                                              ; work         ;
-;       |SP:Stack|                                ; 9 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|SP:Stack                                                                          ; work         ;
-;          |reg:SP_reg|                           ; 9 (9)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|SP:Stack|reg:SP_reg                                                               ; work         ;
-;       |mux1:MUX_ABCD_IN|                        ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|mux1:MUX_ABCD_IN                                                                  ; work         ;
-;       |mux1:MUX_Da|                             ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|mux1:MUX_Da                                                                       ; work         ;
-;       |mux1:MUX_ULA|                            ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|mux1:MUX_ULA                                                                      ; work         ;
-;       |mux2:MUX_MEM|                            ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|mux2:MUX_MEM                                                                      ; work         ;
-;       |reg:op1|                                 ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|reg:op1                                                                           ; work         ;
-;       |reg:op2|                                 ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|reg:op2                                                                           ; work         ;
-;       |reg:op|                                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|reg:op                                                                            ; work         ;
-;       |register_bank:ABCD|                      ; 36 (36)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|register_bank:ABCD                                                                ; work         ;
-;    |ffd:fili|                                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ffd:fili                                                                                        ; work         ;
-;    |ram:ram1|                                   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ram:ram1                                                                                        ; work         ;
-;       |altsyncram:altsyncram_component|         ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ram:ram1|altsyncram:altsyncram_component                                                        ; work         ;
-;          |altsyncram_7l82:auto_generated|       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ram:ram1|altsyncram:altsyncram_component|altsyncram_7l82:auto_generated                         ; work         ;
-+-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                       ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                          ; Library Name ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+--------------+
+; |processor                                      ; 1098 (3)          ; 116 (0)      ; 2048        ; 1            ; 1       ; 0         ; 131  ; 0            ; |processor                                                                                                   ; work         ;
+;    |BINBCD16:BINBDC|                            ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|BINBCD16:BINBDC                                                                                   ; work         ;
+;       |ADD3:add10|                              ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|BINBCD16:BINBDC|ADD3:add10                                                                        ; work         ;
+;       |ADD3:add11|                              ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|BINBCD16:BINBDC|ADD3:add11                                                                        ; work         ;
+;       |ADD3:add12|                              ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|BINBCD16:BINBDC|ADD3:add12                                                                        ; work         ;
+;       |ADD3:add22|                              ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|BINBCD16:BINBDC|ADD3:add22                                                                        ; work         ;
+;       |ADD3:add8|                               ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|BINBCD16:BINBDC|ADD3:add8                                                                         ; work         ;
+;       |ADD3:add9|                               ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|BINBCD16:BINBDC|ADD3:add9                                                                         ; work         ;
+;    |control_block:ctr|                          ; 721 (721)         ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|control_block:ctr                                                                                 ; work         ;
+;    |datapath:DPTH|                              ; 334 (0)           ; 88 (0)       ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH                                                                                     ; work         ;
+;       |B_ULA:LULA|                              ; 181 (153)         ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA                                                                          ; work         ;
+;          |add:adder|                            ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|add:adder                                                                ; work         ;
+;             |lpm_add_sub:LPM_ADD_SUB_component| ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|add:adder|lpm_add_sub:LPM_ADD_SUB_component                              ; work         ;
+;                |add_sub_61h:auto_generated|     ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|add:adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_61h:auto_generated   ; work         ;
+;          |add:inc|                              ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|add:inc                                                                  ; work         ;
+;             |lpm_add_sub:LPM_ADD_SUB_component| ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|add:inc|lpm_add_sub:LPM_ADD_SUB_component                                ; work         ;
+;                |add_sub_61h:auto_generated|     ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|add:inc|lpm_add_sub:LPM_ADD_SUB_component|add_sub_61h:auto_generated     ; work         ;
+;          |mul:mult|                             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|mul:mult                                                                 ; work         ;
+;             |lpm_mult:lpm_mult_component|       ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|mul:mult|lpm_mult:lpm_mult_component                                     ; work         ;
+;                |mult_a8n:auto_generated|        ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|B_ULA:LULA|mul:mult|lpm_mult:lpm_mult_component|mult_a8n:auto_generated             ; work         ;
+;       |PC:ProCnt|                               ; 24 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|PC:ProCnt                                                                           ; work         ;
+;          |add:PC_adder|                         ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|PC:ProCnt|add:PC_adder                                                              ; work         ;
+;             |lpm_add_sub:LPM_ADD_SUB_component| ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|PC:ProCnt|add:PC_adder|lpm_add_sub:LPM_ADD_SUB_component                            ; work         ;
+;                |add_sub_61h:auto_generated|     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|PC:ProCnt|add:PC_adder|lpm_add_sub:LPM_ADD_SUB_component|add_sub_61h:auto_generated ; work         ;
+;          |mux1:PC_mux|                          ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|PC:ProCnt|mux1:PC_mux                                                               ; work         ;
+;          |reg:PC_reg|                           ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|PC:ProCnt|reg:PC_reg                                                                ; work         ;
+;       |SP:Stack|                                ; 9 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|SP:Stack                                                                            ; work         ;
+;          |reg:SP_reg|                           ; 9 (9)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|SP:Stack|reg:SP_reg                                                                 ; work         ;
+;       |mux1:MUX_ABCD_IN|                        ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|mux1:MUX_ABCD_IN                                                                    ; work         ;
+;       |mux1:MUX_Da|                             ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|mux1:MUX_Da                                                                         ; work         ;
+;       |mux1:MUX_ULA|                            ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|mux1:MUX_ULA                                                                        ; work         ;
+;       |mux2:MUX_MEM|                            ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|mux2:MUX_MEM                                                                        ; work         ;
+;       |reg:op1|                                 ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|reg:op1                                                                             ; work         ;
+;       |reg:op2|                                 ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|reg:op2                                                                             ; work         ;
+;       |reg:op|                                  ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|reg:op                                                                              ; work         ;
+;       |register_bank:ABCD|                      ; 36 (36)           ; 48 (48)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|datapath:DPTH|register_bank:ABCD                                                                  ; work         ;
+;    |ffd:filiC|                                  ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ffd:filiC                                                                                         ; work         ;
+;    |ffd:fili|                                   ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ffd:fili                                                                                          ; work         ;
+;    |ram:ram1|                                   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ram:ram1                                                                                          ; work         ;
+;       |altsyncram:altsyncram_component|         ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ram:ram1|altsyncram:altsyncram_component                                                          ; work         ;
+;          |altsyncram_7l82:auto_generated|       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ram:ram1|altsyncram:altsyncram_component|altsyncram_7l82:auto_generated                           ; work         ;
+;    |seg7:disp1|                                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|seg7:disp1                                                                                        ; work         ;
+;    |seg7:disp2|                                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|seg7:disp2                                                                                        ; work         ;
+;    |seg7:disp3|                                 ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|seg7:disp3                                                                                        ; work         ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -349,38 +370,41 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |processor|control_block:ctr|y_present                                                                                                                                                                                                                                                                                                                                                                                                                         ;
-+--------------------+----------------+---------------+----------------+----------------+---------------+----------------+----------------+---------------+-----------------+-----------------+---------------+---------------+---------------+---------------+---------------+----------------+----------------+---------------+---------------+----------------+----------------+----------------+--------------------+-------------------+------------------+-----------------+
-; Name               ; y_present.STK2 ; y_present.STK ; y_present.MOV3 ; y_present.MOV2 ; y_present.EXE ; y_present.ERRO ; y_present.OPR2 ; y_present.RET ; y_present.OPR_2 ; y_present.OPR_1 ; y_present.OPR ; y_present.HLT ; y_present.JMP ; y_present.CMP ; y_present.INC ; y_present.ADD3 ; y_present.ADD2 ; y_present.ADD ; y_present.MOV ; y_present.STK5 ; y_present.STK4 ; y_present.STK3 ; y_present.decoding ; y_present.search2 ; y_present.search ; y_present.start ;
-+--------------------+----------------+---------------+----------------+----------------+---------------+----------------+----------------+---------------+-----------------+-----------------+---------------+---------------+---------------+---------------+---------------+----------------+----------------+---------------+---------------+----------------+----------------+----------------+--------------------+-------------------+------------------+-----------------+
-; y_present.start    ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 0               ;
-; y_present.search   ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 1                ; 1               ;
-; y_present.search2  ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 1                 ; 0                ; 1               ;
-; y_present.decoding ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 1                  ; 0                 ; 0                ; 1               ;
-; y_present.STK3     ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 1              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.STK4     ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 1              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.STK5     ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 1              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.MOV      ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 1             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.ADD      ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 1             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.ADD2     ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 1              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.ADD3     ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 1              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.INC      ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 1             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.CMP      ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 1             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.JMP      ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 1             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.HLT      ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 1             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.OPR      ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 1             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.OPR_1    ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 1               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.OPR_2    ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 1               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.RET      ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 1             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.OPR2     ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 1              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.ERRO     ; 0              ; 0             ; 0              ; 0              ; 0             ; 1              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.EXE      ; 0              ; 0             ; 0              ; 0              ; 1             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.MOV2     ; 0              ; 0             ; 0              ; 1              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.MOV3     ; 0              ; 0             ; 1              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.STK      ; 0              ; 1             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-; y_present.STK2     ; 1              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0             ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
-+--------------------+----------------+---------------+----------------+----------------+---------------+----------------+----------------+---------------+-----------------+-----------------+---------------+---------------+---------------+---------------+---------------+----------------+----------------+---------------+---------------+----------------+----------------+----------------+--------------------+-------------------+------------------+-----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |processor|control_block:ctr|y_present                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++--------------------+----------------+---------------+----------------+----------------+---------------+----------------+----------------+---------------+-----------------+-----------------+---------------+---------------+---------------+---------------+---------------+----------------+----------------+---------------+----------------+---------------+----------------+----------------+----------------+----------------+----------------+--------------------+-------------------+------------------+-----------------+
+; Name               ; y_present.STK2 ; y_present.STK ; y_present.MOV3 ; y_present.MOV2 ; y_present.EXE ; y_present.ERRO ; y_present.OPR2 ; y_present.RET ; y_present.OPR_2 ; y_present.OPR_1 ; y_present.OPR ; y_present.HLT ; y_present.JMP ; y_present.CMP ; y_present.INC ; y_present.ADD3 ; y_present.ADD2 ; y_present.ADD ; y_present.MOV4 ; y_present.MOV ; y_present.STK5 ; y_present.STK4 ; y_present.STK3 ; y_present.JMP3 ; y_present.JMP2 ; y_present.decoding ; y_present.search2 ; y_present.search ; y_present.start ;
++--------------------+----------------+---------------+----------------+----------------+---------------+----------------+----------------+---------------+-----------------+-----------------+---------------+---------------+---------------+---------------+---------------+----------------+----------------+---------------+----------------+---------------+----------------+----------------+----------------+----------------+----------------+--------------------+-------------------+------------------+-----------------+
+; y_present.start    ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 0               ;
+; y_present.search   ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 1                ; 1               ;
+; y_present.search2  ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 1                 ; 0                ; 1               ;
+; y_present.decoding ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 1                  ; 0                 ; 0                ; 1               ;
+; y_present.JMP2     ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 1              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.JMP3     ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 1              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.STK3     ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 1              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.STK4     ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 1              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.STK5     ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 1              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.MOV      ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 1             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.MOV4     ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 1              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.ADD      ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 1             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.ADD2     ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 1              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.ADD3     ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 1              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.INC      ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 1             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.CMP      ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 1             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.JMP      ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 1             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.HLT      ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 1             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.OPR      ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 1             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.OPR_1    ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 1               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.OPR_2    ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 1               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.RET      ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 1             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.OPR2     ; 0              ; 0             ; 0              ; 0              ; 0             ; 0              ; 1              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.ERRO     ; 0              ; 0             ; 0              ; 0              ; 0             ; 1              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.EXE      ; 0              ; 0             ; 0              ; 0              ; 1             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.MOV2     ; 0              ; 0             ; 0              ; 1              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.MOV3     ; 0              ; 0             ; 1              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.STK      ; 0              ; 1             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
+; y_present.STK2     ; 1              ; 0             ; 0              ; 0              ; 0             ; 0              ; 0              ; 0             ; 0               ; 0               ; 0             ; 0             ; 0             ; 0             ; 0             ; 0              ; 0              ; 0             ; 0              ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0                  ; 0                 ; 0                ; 1               ;
++--------------------+----------------+---------------+----------------+----------------+---------------+----------------+----------------+---------------+-----------------+-----------------+---------------+---------------+---------------+---------------+---------------+----------------+----------------+---------------+----------------+---------------+----------------+----------------+----------------+----------------+----------------+--------------------+-------------------+------------------+-----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------+
@@ -388,14 +412,14 @@ Encoding Type:  One-Hot
 +----------------------------------------------------+-----------------------------+------------------------+
 ; Latch Name                                         ; Latch Enable Signal         ; Free of Timing Hazards ;
 +----------------------------------------------------+-----------------------------+------------------------+
-; control_block:ctr|const2[0]                        ; control_block:ctr|Selector5 ; yes                    ;
-; control_block:ctr|const2[1]                        ; control_block:ctr|Selector5 ; yes                    ;
-; control_block:ctr|const2[2]                        ; control_block:ctr|Selector5 ; yes                    ;
-; control_block:ctr|const2[3]                        ; control_block:ctr|Selector5 ; yes                    ;
-; control_block:ctr|const2[4]                        ; control_block:ctr|Selector5 ; yes                    ;
-; control_block:ctr|const2[5]                        ; control_block:ctr|Selector5 ; yes                    ;
-; control_block:ctr|const2[6]                        ; control_block:ctr|Selector5 ; yes                    ;
-; control_block:ctr|const2[7]                        ; control_block:ctr|Selector5 ; yes                    ;
+; control_block:ctr|const2[0]                        ; control_block:ctr|Selector4 ; yes                    ;
+; control_block:ctr|const2[1]                        ; control_block:ctr|Selector4 ; yes                    ;
+; control_block:ctr|const2[2]                        ; control_block:ctr|Selector4 ; yes                    ;
+; control_block:ctr|const2[3]                        ; control_block:ctr|Selector4 ; yes                    ;
+; control_block:ctr|const2[4]                        ; control_block:ctr|Selector4 ; yes                    ;
+; control_block:ctr|const2[5]                        ; control_block:ctr|Selector4 ; yes                    ;
+; control_block:ctr|const2[6]                        ; control_block:ctr|Selector4 ; yes                    ;
+; control_block:ctr|const2[7]                        ; control_block:ctr|Selector4 ; yes                    ;
 ; Number of user-specified and inferred latches = 8  ;                             ;                        ;
 +----------------------------------------------------+-----------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -406,9 +430,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
+; control_block:ctr|y_present.MOV4      ; Stuck at GND due to stuck port data_in ;
 ; control_block:ctr|y_present.INC       ; Stuck at GND due to stuck port data_in ;
 ; control_block:ctr|y_present.CMP       ; Stuck at GND due to stuck port data_in ;
-; control_block:ctr|y_present.HLT       ; Lost fanout                            ;
 ; Total Number of Removed Registers = 3 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
@@ -418,10 +442,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 112   ;
+; Total registers                              ; 116   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 16    ;
-; Number of registers using Asynchronous Clear ; 23    ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 26    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 48    ;
 ; Number of registers using Preset             ; 0     ;
@@ -433,21 +457,24 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |processor|datapath:DPTH|PC:ProCnt|reg:PC_reg|DOUT[1] ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |processor|datapath:DPTH|register_bank:ABCD|BRy[5]    ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |processor|datapath:DPTH|PC:ProCnt|reg:PC_reg|DOUT[0] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |processor|datapath:DPTH|register_bank:ABCD|BRy[0]    ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |processor|datapath:DPTH|register_bank:ABCD|BRx[7]    ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |processor|datapath:DPTH|mux1:MUX_ULA|result[7]       ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |processor|datapath:DPTH|mux1:MUX_Da|result[3]        ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |processor|datapath:DPTH|mux1:MUX_ABCD_IN|result[1]   ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |processor|datapath:DPTH|mux2:MUX_MEM|result[5]       ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |processor|datapath:DPTH|mux1:MUX_Da|result[7]        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |processor|datapath:DPTH|mux1:MUX_ULA|result[2]       ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |processor|datapath:DPTH|mux1:MUX_ABCD_IN|result[7]   ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |processor|control_block:ctr|const                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |processor|control_block:ctr|const                    ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |processor|datapath:DPTH|mux2:MUX_MEM|result[1]       ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |processor|control_block:ctr|y_next                   ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |processor|datapath:DPTH|B_ULA:LULA|out_ULAM[4]       ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |processor|datapath:DPTH|B_ULA:LULA|out_ULAM[5]       ;
 ; 21:1               ; 2 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |processor|datapath:DPTH|B_ULA:LULA|out_ULAM[2]       ;
-; 22:1               ; 2 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |processor|datapath:DPTH|B_ULA:LULA|out_ULAM[6]       ;
-; 22:1               ; 2 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |processor|datapath:DPTH|B_ULA:LULA|out_ULAM[1]       ;
-; 76:1               ; 2 bits    ; 100 LEs       ; 2 LEs                ; 98 LEs                 ; No         ; |processor|control_block:ctr|Selector16               ;
-; 27:1               ; 8 bits    ; 144 LEs       ; 24 LEs               ; 120 LEs                ; No         ; |processor|control_block:ctr|Selector28               ;
-; 59:1               ; 2 bits    ; 78 LEs        ; 4 LEs                ; 74 LEs                 ; No         ; |processor|control_block:ctr|Selector21               ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |processor|datapath:DPTH|B_ULA:LULA|out_ULAM[7]       ;
+; 22:1               ; 2 bits    ; 28 LEs        ; 16 LEs               ; 12 LEs                 ; No         ; |processor|datapath:DPTH|B_ULA:LULA|out_ULAM[0]       ;
+; 46:1               ; 2 bits    ; 60 LEs        ; 8 LEs                ; 52 LEs                 ; No         ; |processor|control_block:ctr|Selector30               ;
+; 41:1               ; 2 bits    ; 54 LEs        ; 28 LEs               ; 26 LEs                 ; No         ; |processor|control_block:ctr|Selector25               ;
+; 50:1               ; 6 bits    ; 198 LEs       ; 18 LEs               ; 180 LEs                ; No         ; |processor|control_block:ctr|Selector23               ;
+; 79:1               ; 2 bits    ; 104 LEs       ; 14 LEs               ; 90 LEs                 ; No         ; |processor|control_block:ctr|Selector15               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 
 
@@ -732,6 +759,62 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+---------------------------------------------------------------+
 
 
++--------------------------------------------------------+
+; Port Connectivity Checks: "BINBCD16:BINBDC|ADD3:add30" ;
++------------+-------+----------+------------------------+
+; Port       ; Type  ; Severity ; Details                ;
++------------+-------+----------+------------------------+
+; add3_in[3] ; Input ; Info     ; Stuck at GND           ;
++------------+-------+----------+------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "BINBCD16:BINBDC|ADD3:add23" ;
++------------+-------+----------+------------------------+
+; Port       ; Type  ; Severity ; Details                ;
++------------+-------+----------+------------------------+
+; add3_in[3] ; Input ; Info     ; Stuck at GND           ;
++------------+-------+----------+------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "BINBCD16:BINBDC|ADD3:add13" ;
++------------+-------+----------+------------------------+
+; Port       ; Type  ; Severity ; Details                ;
++------------+-------+----------+------------------------+
+; add3_in[3] ; Input ; Info     ; Stuck at GND           ;
++------------+-------+----------+------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "BINBCD16:BINBDC|ADD3:add0" ;
++------------+-------+----------+-----------------------+
+; Port       ; Type  ; Severity ; Details               ;
++------------+-------+----------+-----------------------+
+; add3_in[3] ; Input ; Info     ; Stuck at GND          ;
++------------+-------+----------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BINBCD16:BINBDC"                                                                                  ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; binbcd_in[15..8]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; binbcd_out[19..16] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "ffd:filiC"  ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; p    ; Input ; Info     ; Stuck at VCC ;
+; c    ; Input ; Info     ; Stuck at VCC ;
++------+-------+----------+--------------+
+
+
 +----------------------------------------+
 ; Port Connectivity Checks: "ffd:fili"   ;
 +------+-------+----------+--------------+
@@ -770,15 +853,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; enable ; Input ; Info     ; Stuck at VCC         ;
 ; reset  ; Input ; Info     ; Stuck at GND         ;
 +--------+-------+----------+----------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:DPTH|B_ULA:LULA|mul:mult"                                                           ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; result[15..9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------+
@@ -852,15 +926,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+------------------------------------+
 
 
-+-----------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:DPTH|PC:ProCnt|mux1:PC_mux" ;
-+--------+-------+----------+-------------------------------------+
-; Port   ; Type  ; Severity ; Details                             ;
-+--------+-------+----------+-------------------------------------+
-; data3x ; Input ; Info     ; Stuck at GND                        ;
-+--------+-------+----------+-------------------------------------+
-
-
 +-----------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "datapath:DPTH|PC:ProCnt|add:PC_adder"                                                      ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -882,15 +947,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+-------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:DPTH"                                                                      ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; ulao ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; bex  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; bey  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:DPTH"                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; ulao        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; bex         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; bey         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; pc_out_proc ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------+
@@ -898,6 +964,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+-------+----------+--------------+
 ; Port   ; Type  ; Severity ; Details      ;
 +--------+-------+----------+--------------+
+; data_b ; Input ; Info     ; Stuck at GND ;
 ; wren_b ; Input ; Info     ; Stuck at GND ;
 +--------+-------+----------+--------------+
 
@@ -907,7 +974,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -917,7 +984,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Apr  6 20:51:51 2019
+    Info: Processing started: Mon Apr 15 10:17:17 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processor -c processor
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
@@ -971,7 +1038,24 @@ Info (12021): Found 2 design units, including 1 entities, in source file mux2.vh
 Info (12021): Found 2 design units, including 1 entities, in source file ffd.vhd
     Info (12022): Found design unit 1: ffd-ckt
     Info (12023): Found entity 1: ffd
+Info (12021): Found 2 design units, including 1 entities, in source file DIV.vhd
+    Info (12022): Found design unit 1: CLK_Div-ckt
+    Info (12023): Found entity 1: CLK_Div
+Info (12021): Found 2 design units, including 1 entities, in source file BINBDC16.vhd
+    Info (12022): Found design unit 1: BINBCD16-ckt
+    Info (12023): Found entity 1: BINBCD16
+Info (12021): Found 2 design units, including 1 entities, in source file ADD3.vhd
+    Info (12022): Found design unit 1: ADD3-ckt
+    Info (12023): Found entity 1: ADD3
+Info (12021): Found 2 design units, including 1 entities, in source file seg7.vhd
+    Info (12022): Found design unit 1: seg7-ckt
+    Info (12023): Found entity 1: seg7
+Info (12021): Found 2 design units, including 1 entities, in source file BS.vhd
+    Info (12022): Found design unit 1: button-button
+    Info (12023): Found entity 1: button
 Info (12127): Elaborating entity "processor" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at processor.vhd(14): used implicit default value for signal "hex4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at processor.vhd(230): object "PC_OUT_PROC" assigned a value but never read
 Info (12128): Elaborating entity "ram" for hierarchy "ram:ram1"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ram:ram1|altsyncram:altsyncram_component"
 Info (12130): Elaborated megafunction instantiation "ram:ram1|altsyncram:altsyncram_component"
@@ -1048,43 +1132,60 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_dhg
 Info (12128): Elaborating entity "cmpr_dhg" for hierarchy "datapath:DPTH|B_ULA:LULA|comp:cmpa|lpm_compare:LPM_COMPARE_component|cmpr_dhg:auto_generated"
 Info (12128): Elaborating entity "control_block" for hierarchy "control_block:ctr"
-Warning (10631): VHDL Process Statement warning at control_block.vhd(177): inferring latch(es) for signal or variable "const2", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "const2[0]" at control_block.vhd(177)
-Info (10041): Inferred latch for "const2[1]" at control_block.vhd(177)
-Info (10041): Inferred latch for "const2[2]" at control_block.vhd(177)
-Info (10041): Inferred latch for "const2[3]" at control_block.vhd(177)
-Info (10041): Inferred latch for "const2[4]" at control_block.vhd(177)
-Info (10041): Inferred latch for "const2[5]" at control_block.vhd(177)
-Info (10041): Inferred latch for "const2[6]" at control_block.vhd(177)
-Info (10041): Inferred latch for "const2[7]" at control_block.vhd(177)
+Warning (10631): VHDL Process Statement warning at control_block.vhd(182): inferring latch(es) for signal or variable "const2", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "const2[0]" at control_block.vhd(182)
+Info (10041): Inferred latch for "const2[1]" at control_block.vhd(182)
+Info (10041): Inferred latch for "const2[2]" at control_block.vhd(182)
+Info (10041): Inferred latch for "const2[3]" at control_block.vhd(182)
+Info (10041): Inferred latch for "const2[4]" at control_block.vhd(182)
+Info (10041): Inferred latch for "const2[5]" at control_block.vhd(182)
+Info (10041): Inferred latch for "const2[6]" at control_block.vhd(182)
+Info (10041): Inferred latch for "const2[7]" at control_block.vhd(182)
 Info (12128): Elaborating entity "ffd" for hierarchy "ffd:fili"
+Info (12128): Elaborating entity "BINBCD16" for hierarchy "BINBCD16:BINBDC"
+Info (12128): Elaborating entity "ADD3" for hierarchy "BINBCD16:BINBDC|ADD3:add0"
+Info (12128): Elaborating entity "seg7" for hierarchy "seg7:disp1"
 Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer control_block:ctr|clk_d~synth
     Warning (19017): Found clock multiplexer control_block:ctr|clk_d~synth
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer control_block:ctr|sel_MUX_MEM~synth
     Warning (19017): Found clock multiplexer control_block:ctr|clk_d~synth
     Warning (19017): Found clock multiplexer control_block:ctr|clk_d~synth
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "hex2[1]" is stuck at GND
+    Warning (13410): Pin "hex3[0]" is stuck at GND
+    Warning (13410): Pin "hex3[1]" is stuck at GND
+    Warning (13410): Pin "hex3[2]" is stuck at GND
+    Warning (13410): Pin "hex3[3]" is stuck at GND
+    Warning (13410): Pin "hex3[4]" is stuck at GND
+    Warning (13410): Pin "hex3[5]" is stuck at GND
+    Warning (13410): Pin "hex3[6]" is stuck at VCC
+    Warning (13410): Pin "hex4[0]" is stuck at GND
+    Warning (13410): Pin "hex4[1]" is stuck at GND
+    Warning (13410): Pin "hex4[2]" is stuck at GND
+    Warning (13410): Pin "hex4[3]" is stuck at GND
+    Warning (13410): Pin "hex4[4]" is stuck at GND
+    Warning (13410): Pin "hex4[5]" is stuck at GND
+    Warning (13410): Pin "hex4[6]" is stuck at GND
     Warning (13410): Pin "t_sel_SP[1]" is stuck at GND
     Warning (13410): Pin "t_sel_MUX_ABCD[0]" is stuck at GND
     Warning (13410): Pin "t_sel_MUX_ABCD[1]" is stuck at GND
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "b_bs"
     Warning (15610): No output dependent on input pin "wren_b"
-Info (21057): Implemented 993 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 19 input pins
-    Info (21059): Implemented 91 output pins
-    Info (21061): Implemented 874 logic cells
+Info (21057): Implemented 1310 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 119 output pins
+    Info (21061): Implemented 1170 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21062): Implemented 1 DSP elements
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 680 megabytes
-    Info: Processing ended: Sat Apr  6 20:51:59 2019
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:07
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 694 megabytes
+    Info: Processing ended: Mon Apr 15 10:17:29 2019
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:11
 
 
