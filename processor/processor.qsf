@@ -141,6 +141,6 @@ set_location_assignment PIN_AC22 -to t_Aa[3]
 set_location_assignment PIN_AB21 -to t_Aa[2]
 set_location_assignment PIN_AF23 -to t_Aa[1]
 set_location_assignment PIN_AE23 -to t_Aa[0]
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE /home/luiz/Documents/projects/ELE1717/processor/processor.vwf
 set_location_assignment PIN_D13 -to clk
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE /home/luiz/Documents/projects/ELE1717/processor/processor.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1332,16 +1332,6 @@ SIGNAL("b_bs")
 	PARENT = "";
 }
 
-SIGNAL("clk_bs")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
 SIGNAL("hex0")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
@@ -1740,6 +1730,16 @@ SIGNAL("hex4[0]")
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
 	PARENT = "hex4";
+}
+
+SIGNAL("clk")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
 }
 
 TRANSITION_LIST("address_b[7]")
@@ -2834,20 +2834,6 @@ TRANSITION_LIST("b_bs")
 	}
 }
 
-TRANSITION_LIST("clk_bs")
-{
-	NODE
-	{
-		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 10000;
-			LEVEL 0 FOR 5.0;
-			LEVEL 1 FOR 5.0;
-		}
-	}
-}
-
 TRANSITION_LIST("hex0[6]")
 {
 	NODE
@@ -3163,6 +3149,20 @@ TRANSITION_LIST("hex4[0]")
 	}
 }
 
+TRANSITION_LIST("clk")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 10000;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+		}
+	}
+}
+
 DISPLAY_LINE
 {
 	CHANNEL = "r";
@@ -3174,7 +3174,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "clk_bs";
+	CHANNEL = "clk";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
