@@ -7,7 +7,7 @@ rjmp Interruption
 
 
 BCDsetup:
-	ldi r16,18 ; Number to enter bcd conversion
+	ldi r16,65 ; Number to enter bcd conversion
 	ldi r17,100 ; Maior ordem do numero
 	ldi r18,0 ; Saida BCD pra cada dezena, unidade
 	ldi r19,0b00000100; Second bit set means its subtracting from 10
@@ -117,7 +117,7 @@ setup:
 LightingUp:
 	;Contagem do timer
 	ldi r20,0b00000000
-	ldi r21,0b11111111
+	ldi r21,0b01111111
 	sts OCR1AH,r20
 	sts OCR1AL,r21
 	call BCDsetup;r20 e r21 est�o ocupados

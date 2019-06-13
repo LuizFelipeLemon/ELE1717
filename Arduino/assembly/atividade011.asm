@@ -1,36 +1,37 @@
 .INCLUDE "m328Pdef.inc"
 .org 0x0000 
-jmp SETUP
+jmp setup
 .org 0x002A 
-jmp FUNC
-SETUP: 
+jmp func
+
+setup: 
   ldi R16,0x03
   out DDRC,R16
   ldi R16,0xFC
   out DDRD,R16
 
-FUNC:
- in R17,PINC
- cpi R17,0x01
- breq RETAN
- in R17,PINC
- cpi R17,0x02
- breq SERRA
- in R17,PINC
- cpi R17,0x03
- breq TRIAN
- rjmp FUNC
+func:
+  in R17,PINC
+  cpi R17,0x01
+  breq rec
+  in R17,PINC
+  cpi R17,0x02
+  breq saw
+  in R17,PINC
+  cpi R17,0x03
+  breq tri
+  rjmp func
 
- RETAN:
+rec:
   ldi R20,0xFC
   out PORTD,R20
   rcall delay
   clr R20
   out PORTD,R20
   rcall delay
-  rjmp FUNC
+  rjmp func
 
- SERRA:
+saw:
   sbi PORTD,2
   rcall delay
   sbi PORTD,3
@@ -45,9 +46,10 @@ FUNC:
   rcall delay
   clr R17
   out PORTD,R17
-  rjmp FUNC
+  rcall delay
+  rjmp func
 
-  TRIAN:
+tri:
   sbi PORTD,2
   rcall delay
   sbi PORTD,3
@@ -72,19 +74,20 @@ FUNC:
   rcall delay
   cbi PORTD,2
   rcall delay
-  rjmp FUNC
+  rjmp func
   
-  delay:
-   clr R21
-   clr R22
-   ldi R23,5
+delay:
+
+  clr R21
+  clr R22
+  ldi R23,30
   
    
-  loop:
-   dec R21
-   brne loop
-   dec R22
-   brne loop
-   dec R23
-   brne loop
-   ret 
+loop:
+  dec R21
+  brne loop
+  dec R22
+  brne loop
+  dec R23
+  brne loop
+  ret 

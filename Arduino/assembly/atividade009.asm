@@ -19,21 +19,38 @@ main:
     sbi DDRD, 3
     sbi DDRD, 2
 
-    
-
-
-wait:
-    rjmp wait
+waitar:
+    rjmp waitar
 
 
 ADCOMPLETE:
-    lds r18, ADCL  ; Must read ADCL first, and ADCH after that
-    lds r19, ADCH
-
-    cpi r18,0b01100100
-    BRCS 2
-    sbi PORTD, 2
-    RJMP 1
-    cbi PORTD, 2
-
-    reti
+    
+    lds r18,ADCL
+    lds r19,ADCH
+    ; ldi r21, 0b00011100 
+    ;out PORTD,r19
+    cpi r19,50; 11001101
+    brsh setbit1
+    cbi PORTD,2
+    jmp waitar
+setbit1:
+    sbi PORTD,2
+    cpi r19,100; 11001101
+    brsh setbit2
+    cbi PORTD,3
+    jmp waitar 
+setbit2:
+    sbi PORTD,3
+    cpi r19,150
+    brsh setbit3
+    cbi PORTD,4
+    jmp waitar
+setbit3:
+    sbi PORTD,4
+    cpi r19,200
+    brsh setbit4
+    cbi PORTD,5
+    jmp waitar
+setbit4:
+    sbi PORTD,5
+    jmp waitar

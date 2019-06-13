@@ -6,8 +6,10 @@ rjmp Interruption
 
 
 BCDsetup:
-	ldi r16,34 ; Number to enter bcd conversion
-	ldi r17,100 ; Maior ordem do numero
+	;ldi r16,34 ; Number to enter bcd conversion
+    ;dec r26
+	ld r16,X
+    ldi r17,100 ; Maior ordem do numero
 	ldi r18,0 ; Saida BCD pra cada dezena, unidade
 	ldi r19,0b00000100; Second bit set means its subtracting from 10
     SubLoop:
@@ -85,12 +87,12 @@ DisplayOut:
 ;7Seg-----------------------------
 
 ShiftRight:
-lsr r19
-lsr r19
-lsr r19
-lsr r19
-lsr r19
-lsr r19
+    lsr r19
+    lsr r19
+    lsr r19
+    lsr r19
+    lsr r19
+    lsr r19
 ret
 delay:
 	sbrs r22,0 ; Skip if bit 0 in r22 is set
@@ -100,10 +102,10 @@ delay:
 
 ;calctroco -----------------
 caltroco:
-    ldi r20,255 ; Valor
+    ldi r20,124; Valor
        
     clr r27 ; Clear X high byte
-    ldi r26,$60 ; Set X low byte to $60
+    ldi r26,$4000 ; Set X low byte to $60
 
     clr r18
     
@@ -130,8 +132,10 @@ caltroco:
         inc r18
         JMP LOOP
     menor:
+        ;st X+,r18
+        ;ldi r18,45 ; Set X low byte to $60
         st X+,r18
-        clr r16
+        ldi r16,1
         CPSE r19,r16
         rjmp LOOP1
         ret
@@ -140,7 +144,7 @@ caltroco:
 setup:
 	ldi r20,0b11111100
 	out DDRD,r20
-	ldi r20,0b11111111
+	ldi r20,0b00010111
 	out DDRB,r20
 	ldi r20,0
 	out PORTB,r20
@@ -151,13 +155,20 @@ setup:
 	sts TCCR1A, r20
 	ldi r20, 0b00001101 ; Set clk select to clkIO/1024
 	sts TCCR1B,r20
+    call caltroco
+    ldi r26,$4000
 
-LightingUp:
+enlaitecer:
 	;Contagem do timer
 	ldi r20,0b00000000
-	ldi r21,0b11111111
+	ldi r21,0b01111111
 	sts OCR1AH,r20
 	sts OCR1AL,r21
+   
+    ;clr r27 ; Clear X high byte
+    ;ldi r26,$4000 ; Set X low byte to $60
+    ;ldi r23,27
+    ;st X,r23
 	call BCDsetup;r20 e r21 est�o ocupados
 
 	;Display 2 - Dezenas
@@ -200,8 +211,36 @@ LightingUp:
 	call delay
 	cbi PORTB,1
 
-	jmp LightingUp
+    in r16,PINB
+    ldi r17,0b00010000
+    
+    SBRS r16,5
+    ;sbi PORTB,4
+    call delaysama
+    
+    ;nop
+    ;SBRS r16,3
+    ;cbi PORTB,4
+    
+
+	jmp enlaitecer
+
 
 Interruption:
 	ldi r22,0b00000001 ; Seta o bit 0 pra sair do delay
 	reti
+
+delaysama:
+inc r26
+ clr r20
+ clr r21
+ ldi R22,1
+
+ delayloop:
+  dec r20
+  brne delayloop
+  dec r21
+  brne delayloop
+  dec R22
+  brne delayloop
+  ret
