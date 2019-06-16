@@ -1,5 +1,5 @@
-TARGET=fir
-SOURCES=fir.c
+TARGET=i2cSlave
+SOURCES=i2cSlave.c
 DEPS=
 COBJ=$(SOURCES:.c=.o)
 
@@ -9,7 +9,7 @@ MCU=atmega328p
 CFLAGS=-I. -Wall -Os -DF_CPU=16000000UL 
 LDFLAGS=
 
-ISPPORT=/dev/ttyACM0
+ISPPORT=/dev/ttyUSB0
 ISPDIR=/usr/share/arduino/hardware/tools
 ISP=$(ISPDIR)/avrdude
 ISPFLAGS=-c arduino -p $(MCU) -P $(ISPPORT) -b 115200 -C $(ISPDIR)/avrdude.conf 
